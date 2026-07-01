@@ -1,0 +1,97 @@
+/* ============================================================
+   MEDIA QUERIES — mobile-first overrides not covered by clamp()
+   ============================================================ */
+
+/* ---- xs: < 400px ---- */
+@media (max-width: 24.999rem) {
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .trust__stats { grid-template-columns: 1fr 1fr; }
+  .review-card { width: 16rem; }
+  .lightbox__nav--prev { left: -1rem; }
+  .lightbox__nav--next { right: -1rem; }
+}
+
+/* ---- sm: 400px + ---- */
+@media (min-width: 25rem) {
+  .hero__title { font-size: clamp(3rem, 10vw, 8rem); }
+}
+
+/* ---- md: 640px / 40rem ---- */
+@media (min-width: 40rem) {
+  .booking__form-row { grid-template-columns: 1fr 1fr; }
+  .footer__main { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- lg: 1024px / 64rem ---- */
+@media (min-width: 64rem) {
+  .header__nav { display: flex; }
+  .header__cta { display: flex; }
+  .burger { display: none; }
+
+  .hero__content {
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+  }
+  .hero__main { grid-column: 1 / 2; }
+  .hero__badge { display: flex; }
+
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-card--wide { grid-column: span 2; }
+  .service-card--tall { grid-row: span 2; }
+
+  .configurator__layout { grid-template-columns: 1fr 1fr; }
+  .booking__layout { grid-template-columns: 1fr 1.5fr; }
+  .loyalty__layout { grid-template-columns: 1fr 1fr; }
+  .faq__layout { grid-template-columns: 1fr 2fr; }
+  .footer__main { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  .masters__grid { grid-template-columns: repeat(4, 1fr); }
+  .pricing__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---- xl: 1280px / 80rem ---- */
+@media (min-width: 80rem) {
+  .gallery__grid { columns: 4; }
+  .hero__content { padding-block: var(--sp-32) var(--sp-20); }
+}
+
+/* ---- 2xl: 1536px / 96rem ---- */
+@media (min-width: 96rem) {
+  .services__grid { grid-template-columns: repeat(4, 1fr); }
+  .masters__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---- Print ---- */
+@media print {
+  .header,
+  .hero__video-wrap,
+  .hero__spotlight,
+  .hero__scroll,
+  .hero__badge,
+  .mobile-menu,
+  .lightbox,
+  .modal-overlay { display: none !important; }
+  body { background: #fff; color: #000; }
+}
+
+/* ---- Hover: coarse (touch devices) ---- */
+@media (hover: none) {
+  .gallery__item-overlay { opacity: 1; }
+  .master-card__overlay   { opacity: 1; }
+  .card:hover { transform: none; }
+  .service-card:hover { transform: none; }
+  .gallery__item:hover { transform: none; }
+}
+
+/* ---- Reduced motion (honour system pref) ---- */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track,
+  .reviews__track,
+  .badge-spin,
+  .hero__scroll-line { animation: none !important; }
+  .reveal,
+  .reveal--fade { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .loyalty-level__bar-fill { transition: none; }
+}

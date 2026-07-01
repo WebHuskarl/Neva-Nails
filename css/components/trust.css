@@ -1,0 +1,108 @@
+/* ============================================================
+   TRUST BAR — counters, marquee brands
+   ============================================================ */
+
+.trust {
+  padding-block: var(--sp-16);
+  background: var(--color-bg-raised);
+  border-block: var(--border-hairline);
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(124, 92, 255, 0.06);
+}
+
+.trust__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-8);
+  margin-bottom: var(--sp-12);
+  padding-inline: var(--container-pad);
+  max-width: var(--container-width);
+  margin-inline: auto;
+  margin-bottom: var(--sp-12);
+}
+
+.trust__stat {
+  text-align: center;
+  position: relative;
+  padding: var(--sp-6);
+}
+.trust__stat::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: var(--color-graphite);
+}
+.trust__stat:last-child::after { display: none; }
+
+.trust__stat-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+  background: var(--grad-pearl);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+.trust__stat-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-pearl-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: var(--sp-2);
+}
+
+/* Marquee brands */
+.trust__marquee {
+  border-top: var(--border-hairline);
+  padding-top: var(--sp-8);
+  position: relative;
+}
+.trust__marquee::before,
+.trust__marquee::after {
+  content: '';
+  position: absolute;
+  top: var(--sp-8);
+  bottom: 0;
+  width: 6rem;
+  z-index: 2;
+  pointer-events: none;
+}
+.trust__marquee::before { left: 0; background: linear-gradient(to right, var(--color-bg-raised), transparent); }
+.trust__marquee::after  { right: 0; background: linear-gradient(to left, var(--color-bg-raised), transparent); }
+
+.trust__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding-inline: var(--sp-6);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-pearl-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+.trust__brand:hover { color: var(--color-pearl-dim); }
+.trust__brand-dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: var(--color-lilac);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+@media (min-width: 48rem) {
+  .trust__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .trust__stat:last-child::after { display: none; }
+  .trust__stat:nth-child(4)::after { display: none; }
+}

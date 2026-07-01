@@ -1,0 +1,238 @@
+/* ============================================================
+   CONFIGURATOR — nail design picker
+   ============================================================ */
+
+.configurator { background: var(--color-bg-raised); border-block: var(--border-hairline); }
+
+.configurator__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+/* Controls panel */
+.configurator__controls { display: flex; flex-direction: column; gap: var(--sp-8); }
+
+.config-group__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-pearl-dim);
+  margin-bottom: var(--sp-4);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.config-group__label::before {
+  content: '';
+  display: inline-block;
+  width: 0.75rem;
+  height: 1px;
+  background: var(--color-lilac);
+}
+
+/* Pill toggles */
+.config-group__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.config-option {
+  position: relative;
+}
+.config-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.config-option__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.5rem 1.125rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-graphite);
+  font-size: var(--fs-sm);
+  color: var(--color-pearl-dim);
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), background var(--transition), box-shadow var(--transition);
+  user-select: none;
+  white-space: nowrap;
+}
+.config-option__label:hover {
+  border-color: rgba(185,160,255,0.4);
+  color: var(--color-pearl);
+}
+.config-option input:checked + .config-option__label {
+  border-color: var(--color-violet);
+  color: var(--color-violet);
+  background: rgba(124,92,255,0.07);
+  box-shadow: 0 0 0.75rem var(--color-violet-glow-s);
+}
+.config-option input:focus-visible + .config-option__label {
+  outline: 2px solid var(--color-lilac);
+  outline-offset: 2px;
+}
+
+/* Color swatches */
+.config-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+.config-color {
+  position: relative;
+}
+.config-color input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.config-color__swatch {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color var(--transition), transform var(--transition-spring);
+}
+.config-color__swatch:hover { transform: scale(1.15); }
+.config-color input:checked + .config-color__swatch { outline-color: var(--color-lilac); }
+.config-color input:focus-visible + .config-color__swatch { outline-color: var(--color-pearl); }
+
+/* Preview panel */
+.configurator__preview {
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-8);
+}
+
+.nail-preview {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: var(--sp-8);
+  background: var(--color-bg-high);
+  border-radius: var(--radius-xl);
+  border: var(--border-hairline);
+  min-height: 12rem;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.nail {
+  border-radius: 50% 50% 10% 10%;
+  transition: background var(--transition-slow), height var(--transition-slow), width var(--transition-slow), border-radius var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+/* Shine highlight */
+.nail::after {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: 20%;
+  width: 25%;
+  height: 35%;
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  filter: blur(2px);
+}
+
+/* Default (medium almond) sizes */
+.nail { width: 1.625rem; height: 3.75rem; }
+.nail:nth-child(1), .nail:nth-child(5) { height: 3rem; width: 1.25rem; }
+.nail:nth-child(2), .nail:nth-child(4) { height: 3.5rem; width: 1.5rem; }
+.nail:nth-child(3) { height: 4rem; width: 1.75rem; }
+
+/* Shapes */
+[data-shape="square"]   .nail { border-radius: 22% 22% 8% 8%; }
+[data-shape="oval"]     .nail { border-radius: 42% 42% 42% 42% / 38% 38% 38% 38%; } /* rounded egg-shape */
+[data-shape="almond"]   .nail { border-radius: 50% 50% 8% 8%; transform: scaleX(0.82); } /* narrow, pointed tip */
+[data-shape="ballerina"] .nail { border-radius: 55% 55% 4% 4%; clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
+
+/* Lengths */
+[data-length="short"]  .nail { height: 2.5rem !important; }
+[data-length="short"]  .nail:nth-child(3) { height: 3rem !important; }
+[data-length="medium"] .nail { height: 3.75rem; }
+[data-length="long"]   .nail { height: 5rem !important; }
+[data-length="long"]   .nail:nth-child(3) { height: 5.75rem !important; }
+
+.configurator__result {
+  text-align: center;
+  width: 100%;
+}
+.configurator__result-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-pearl-dim);
+  margin-bottom: var(--sp-4);
+}
+.configurator__result-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-pearl);
+  margin-bottom: var(--sp-6);
+}
+
+/* Group label hint */
+.config-group__hint {
+  font-size: 0.6rem;
+  color: var(--color-violet);
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  opacity: 0.8;
+}
+
+/* Discount display */
+.configurator__discount {
+  margin-bottom: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  background: linear-gradient(135deg, rgba(124,92,255,0.08) 0%, rgba(29,181,154,0.05) 100%);
+  border: 1px solid rgba(124,92,255,0.2);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+.configurator__discount-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-violet);
+  margin-bottom: 0.25rem;
+}
+.configurator__discount-note {
+  font-size: var(--fs-xs);
+  color: var(--color-ink-secondary);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Nail preview dark background for light nail colors */
+.nail-preview.is-light-bg {
+  background: var(--color-ink);
+}
+
+@media (min-width: 56rem) {
+  .configurator__layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}

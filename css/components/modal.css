@@ -1,0 +1,96 @@
+/* ============================================================
+   MODAL — generic modal overlay (used by lightbox)
+   ============================================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-slow);
+  overscroll-behavior: contain;
+}
+.modal-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 21, 26, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  position: relative;
+  background: var(--color-bg-raised);
+  border: var(--border-hairline);
+  border-radius: var(--radius-xl);
+  max-width: 40rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(1rem) scale(0.98);
+  transition: transform var(--transition-spring);
+}
+.modal-overlay.is-open .modal {
+  transform: translateY(0) scale(1);
+}
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--grad-hairline);
+  opacity: 0.5;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-6) var(--sp-6) 0;
+  gap: var(--sp-4);
+}
+.modal__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-pearl);
+}
+.modal__close {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-pearl-dim);
+  flex-shrink: 0;
+  transition: background var(--transition), color var(--transition);
+}
+.modal__close:hover { background: var(--color-onyx); color: var(--color-lilac); }
+.modal__close:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
+.modal__close svg { width: 1.125rem; height: 1.125rem; pointer-events: none; }
+
+.modal__body { padding: var(--sp-6); }
+.modal__footer {
+  padding: 0 var(--sp-6) var(--sp-6);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sp-3);
+}
+
+/* Scroll lock */
+body.modal-open { overflow: hidden; }

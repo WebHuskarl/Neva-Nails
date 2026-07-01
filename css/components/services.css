@@ -1,0 +1,179 @@
+/* ============================================================
+   SERVICES — asymmetric bento grid
+   ============================================================ */
+
+.services { position: relative; }
+
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+}
+
+/* Service card */
+.service-card {
+  background: var(--color-bg-raised);
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-spring), box-shadow var(--transition-slow), border-color var(--transition);
+  cursor: default;
+  box-shadow: var(--shadow-sm);
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(185,160,255,0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
+}
+.service-card:hover::after { opacity: 1; }
+
+/* Corner markers */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-top: 1px solid rgba(185,160,255,0.4);
+  border-right: 1px solid rgba(185,160,255,0.4);
+}
+.service-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 2rem rgba(124,92,255,0.12), var(--shadow-md);
+  border-color: rgba(124,92,255,0.25);
+}
+
+/* Featured card */
+.service-card--featured {
+  border-color: rgba(124,92,255,0.25);
+  background: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 60%, #EEF4FF 100%);
+  border-left: 3px solid var(--color-violet);
+}
+.service-card--featured .service-card__badge {
+  display: inline-flex;
+}
+.service-card--featured .service-card__icon {
+  color: var(--color-violet);
+  filter: drop-shadow(0 0 8px rgba(124,92,255,0.25));
+}
+
+/* Subtle accent left border on hover */
+.service-card:not(.service-card--featured):hover {
+  border-left-color: rgba(124,92,255,0.4);
+}
+
+.service-card__index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-lilac);
+  letter-spacing: 0.15em;
+  margin-bottom: var(--sp-6);
+  display: block;
+  opacity: 0.7;
+}
+
+.service-card__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-lilac);
+  margin-bottom: var(--sp-6);
+  transition: transform var(--transition-spring);
+  flex-shrink: 0;
+}
+.service-card:hover .service-card__icon { transform: scale(1.1); }
+
+.service-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-pearl);
+  margin-bottom: var(--sp-3);
+  line-height: var(--lh-snug);
+}
+
+.service-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--color-pearl-dim);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--sp-6);
+}
+
+.service-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--sp-6);
+  border-top: var(--border-hairline);
+}
+
+.service-card__price {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-ink-muted);
+  letter-spacing: 0.05em;
+}
+.service-card__price span {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-ink);
+  margin-left: 0.2rem;
+  letter-spacing: -0.01em;
+}
+
+.service-card__cta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-lilac);
+  transition: gap var(--transition-spring);
+}
+.service-card__cta svg { width: 1rem; height: 1rem; flex-shrink: 0; transition: transform var(--transition-spring); }
+.service-card:hover .service-card__cta { gap: var(--sp-3); }
+.service-card:hover .service-card__cta svg { transform: translateX(0.25rem); }
+
+/* Badge on featured */
+.service-card__badge {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--grad-lilac);
+  color: var(--color-pearl);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+}
+
+/* Bento layout */
+@media (min-width: 40rem) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+  .service-card--wide {
+    grid-column: span 2;
+  }
+  .service-card--tall {
+    grid-row: span 2;
+  }
+}
