@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    REVIEWS — centered auto-play carousel
    ============================================================ */
 
@@ -7,11 +7,9 @@
   padding-bottom: var(--sp-8);
 }
 
-/* ---- Carousel wrapper (flex: nav + viewport + nav) ---- */
+/* ---- Carousel wrapper ---- */
 .reviews__carousel {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-4);
+  display: block;
   max-width: calc(var(--container-width));
   margin-inline: auto;
   padding-inline: clamp(0.5rem, 2vw, var(--container-pad));
@@ -20,6 +18,10 @@
 
 /* Nav buttons */
 .reviews__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
   flex-shrink: 0;
   width: 2.75rem;
   height: 2.75rem;
@@ -32,9 +34,15 @@
   color: var(--color-ink-secondary);
   cursor: pointer;
   transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition-slow);
-  z-index: 2;
   box-shadow: var(--shadow-sm);
 }
+.reviews__nav--prev { left: 0.25rem; }
+.reviews__nav--next { right: 0.25rem; }
+@media (min-width: 48rem) {
+  .reviews__nav--prev { left: -1rem; }
+  .reviews__nav--next { right: -1rem; }
+}
+
 .reviews__nav:hover {
   background: var(--color-violet);
   color: #fff;

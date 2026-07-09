@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    HEADER — sticky, liquid glass, scroll progress, scroll-spy
    ============================================================ */
 
@@ -164,11 +164,13 @@
   justify-content: center;
   gap: var(--sp-8);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--transition-slow);
+  transition: opacity var(--transition-slow), visibility var(--transition-slow);
 }
 .mobile-menu.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: all;
 }
 .mobile-menu__list {
@@ -228,4 +230,5 @@
   .header__nav { display: flex; }
   .header__cta { display: flex; }
   .burger { display: none; }
+  .mobile-menu { display: none; }
 }

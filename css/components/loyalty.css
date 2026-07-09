@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    LOYALTY — levels, progress bar, how-it-works
    ============================================================ */
 
@@ -211,13 +211,14 @@
 .cert__seal-text {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: var(--cert-text);
   font-family: var(--font-display), sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.05em;
   font-weight: bold;
   text-align: center;
   line-height: 1;
+  opacity: 0.9;
 }
 .cert__seal-text small {
   display: block;

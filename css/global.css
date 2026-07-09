@@ -17,7 +17,7 @@ body {
   line-height: var(--lh-normal);
   overflow-x: hidden;
   position: relative;
-  min-height: 320px;
+  min-width: 320px;
 }
 
 
