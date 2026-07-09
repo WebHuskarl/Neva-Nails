@@ -19,23 +19,11 @@
   <!-- Favicon — SVG logo converted -->
   <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/components/header.css">
-  <link rel="stylesheet" href="css/components/hero.css">
-  <link rel="stylesheet" href="css/components/trust.css">
-  <link rel="stylesheet" href="css/components/services.css">
-  <link rel="stylesheet" href="css/components/configurator.css">
-  <link rel="stylesheet" href="css/components/gallery.css">
-  <link rel="stylesheet" href="css/components/masters.css">
-  <link rel="stylesheet" href="css/components/loyalty.css">
-  <link rel="stylesheet" href="css/components/reviews.css">
-  <link rel="stylesheet" href="css/components/booking.css">
-  <link rel="stylesheet" href="css/components/footer.css">
-  <link rel="stylesheet" href="css/components/modal.css">
-  <link rel="stylesheet" href="css/media.css">
+  <!-- Video Preload for instant play -->
+  <link rel="preload" as="video" href="images/hero/hero.mp4">
+  
+  <!-- Bundled CSS for fast rendering -->
+  <link rel="stylesheet" href="css/bundle.css">
 </head>
 
 <body>
@@ -116,15 +104,15 @@
       <div class="hero__video-wrap" aria-hidden="true">
         <div class="hero__video-poster" aria-hidden="true"></div>
         <video class="hero__video" data-hero-video muted playsinline preload="auto"
-          poster="images/hero/slide1.jpg">
+          poster="images/hero/slide1.webp">
           <source src="images/hero/hero.mp4" type="video/mp4">
         </video>
         <!-- Slideshow: shown after video pauses -->
         <div class="hero__slideshow" data-hero-slideshow aria-hidden="true">
-          <img class="hero__slide" src="images/hero/slide1.jpg" alt="" loading="eager" draggable="false">
-          <img class="hero__slide" src="images/hero/slide2.jpg" alt="" loading="lazy" draggable="false">
-          <img class="hero__slide" src="images/hero/slide3.jpg" alt="" loading="lazy" draggable="false">
-          <img class="hero__slide" src="images/hero/slide4.jpg" alt="" loading="lazy" draggable="false">
+          <img class="hero__slide" src="images/hero/slide1.webp" alt="" loading="eager" draggable="false">
+          <img class="hero__slide" src="images/hero/slide2.webp" alt="" loading="lazy" draggable="false">
+          <img class="hero__slide" src="images/hero/slide3.webp" alt="" loading="lazy" draggable="false">
+          <img class="hero__slide" src="images/hero/slide4.webp" alt="" loading="lazy" draggable="false">
         </div>
         <div class="hero__wm-cover" aria-hidden="true"></div>
       </div>
@@ -264,76 +252,76 @@
         <div class="marquee">
           <div class="marquee__track trust__track" aria-hidden="true" style="--groups: 8;">
             <div class="marquee__group">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
             <div class="marquee__group" aria-hidden="true">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
             <div class="marquee__group" aria-hidden="true">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
             <div class="marquee__group" aria-hidden="true">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
             <div class="marquee__group" aria-hidden="true">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
             <div class="marquee__group" aria-hidden="true">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
             <div class="marquee__group" aria-hidden="true">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
             <div class="marquee__group" aria-hidden="true">
-              <span class="trust__brand"><img src="images/opi.png" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
-              <span class="trust__brand"><img src="images/cnd.png" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
-              <span class="trust__brand"><img src="images/gelish.png" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
-              <span class="trust__brand"><img src="images/ibd.png" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
-              <span class="trust__brand"><img src="images/naomi.jpg" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
-              <span class="trust__brand"><img src="images/kiara-sky.png" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
-              <span class="trust__brand"><img src="images/bio-sculpture.png" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
+              <span class="trust__brand"><img src="images/opi.webp" alt="" class="trust__brand-img" loading="lazy"> OPI</span>
+              <span class="trust__brand"><img src="images/cnd.webp" alt="" class="trust__brand-img" loading="lazy"> CND Shellac</span>
+              <span class="trust__brand"><img src="images/gelish.webp" alt="" class="trust__brand-img" loading="lazy"> Gelish</span>
+              <span class="trust__brand"><img src="images/ibd.webp" alt="" class="trust__brand-img" loading="lazy"> IBD</span>
+              <span class="trust__brand"><img src="images/naomi.webp" alt="" class="trust__brand-img" loading="lazy"> Naomi</span>
+              <span class="trust__brand"><img src="images/kiara-sky.webp" alt="" class="trust__brand-img" loading="lazy"> Kiara Sky</span>
+              <span class="trust__brand"><img src="images/bio-sculpture.webp" alt="" class="trust__brand-img" loading="lazy"> Bio Sculpture</span>
             </div>
           </div>
         </div>
@@ -361,9 +349,9 @@
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="manicure design" role="button"
             aria-label="Открыть работу: Нюд-градиент с перламутром" tabindex="0"
-            data-lightbox-src="images/gallery/photo-01.jpg" data-lightbox-tag="Дизайн"
+            data-lightbox-src="images/gallery/photo-01.webp" data-lightbox-tag="Дизайн"
             data-lightbox-title="Нежный нюд с перламутровым градиентом">
-            <img class="gallery__img" src="images/gallery/photo-01.jpg" alt="Маникюр - миндаль с градиентом"
+            <img class="gallery__img" src="images/gallery/photo-01.webp" alt="Маникюр - миндаль с градиентом"
               loading="lazy" decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Дизайн</span>
@@ -372,9 +360,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design" role="button"
-            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-02.jpg"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-02.webp"
             data-lightbox-tag="Дизайн" data-lightbox-title="Минимализм с золотым декором">
-            <img class="gallery__img" src="images/gallery/photo-02.jpg" alt="Авторский дизайн" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-02.webp" alt="Авторский дизайн" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Авторский дизайн</span>
@@ -383,9 +371,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="manicure" role="button"
-            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-03.jpg"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-03.webp"
             data-lightbox-tag="Маникюр" data-lightbox-title="Идеальная форма — классика">
-            <img class="gallery__img" src="images/gallery/photo-03.jpg" alt="Маникюр классика" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-03.webp" alt="Маникюр классика" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Маникюр</span>
@@ -394,9 +382,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="pedicure" role="button"
-            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-04.jpg"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-04.webp"
             data-lightbox-tag="Педикюр" data-lightbox-title="SPA-педикюр с покрытием">
-            <img class="gallery__img" src="images/gallery/photo-04.jpg" alt="SPA педикюр" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-04.webp" alt="SPA педикюр" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Педикюр</span>
@@ -405,9 +393,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="extension design" role="button"
-            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-05.jpg"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-05.webp"
             data-lightbox-tag="Наращивание" data-lightbox-title="Наращивание — алмондная форма">
-            <img class="gallery__img" src="images/gallery/photo-05.jpg" alt="Наращивание миндаль" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-05.webp" alt="Наращивание миндаль" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Наращивание</span>
@@ -416,9 +404,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design manicure" role="button"
-            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-06.jpg"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-06.webp"
             data-lightbox-tag="Дизайн" data-lightbox-title="Авторский дизайн">
-            <img class="gallery__img" src="images/gallery/photo-06.jpg" alt="Авторский дизайн" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-06.webp" alt="Авторский дизайн" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Дизайн</span>
@@ -427,9 +415,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design manicure" role="button"
-            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-07.jpg"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-07.webp"
             data-lightbox-tag="Дизайн" data-lightbox-title="Осенний nail-art с листьями">
-            <img class="gallery__img" src="images/gallery/photo-07.jpg" alt="Осенний nail-art" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-07.webp" alt="Осенний nail-art" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Осенний дизайн</span>
@@ -438,9 +426,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design" role="button"
-            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-08.jpg"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-08.webp"
             data-lightbox-tag="Дизайн" data-lightbox-title="Chrome-эффект на базе лиловый">
-            <img class="gallery__img" src="images/gallery/photo-08.jpg" alt="Chrome дизайн" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-08.webp" alt="Chrome дизайн" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Chrome</span>
@@ -449,9 +437,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="pedicure" role="button"
-            aria-label="Открыть работу: Педикюр нюд" tabindex="0" data-lightbox-src="images/gallery/photo-09.jpg"
+            aria-label="Открыть работу: Педикюр нюд" tabindex="0" data-lightbox-src="images/gallery/photo-09.webp"
             data-lightbox-tag="Педикюр" data-lightbox-title="Нежный нюд-педикюр">
-            <img class="gallery__img" src="images/gallery/photo-09.jpg" alt="Педикюр нюд" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-09.webp" alt="Педикюр нюд" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Педикюр</span>
@@ -460,9 +448,9 @@
           </a>
 
           <a href="#" class="gallery__item reveal" data-gallery-item data-tags="pedicure" role="button"
-            aria-label="Открыть работу: Летний педикюр" tabindex="0" data-lightbox-src="images/gallery/photo-10.jpg"
+            aria-label="Открыть работу: Летний педикюр" tabindex="0" data-lightbox-src="images/gallery/photo-10.webp"
             data-lightbox-tag="Педикюр" data-lightbox-title="Яркий летний педикюр">
-            <img class="gallery__img" src="images/gallery/photo-10.jpg" alt="Летний педикюр" loading="lazy"
+            <img class="gallery__img" src="images/gallery/photo-10.webp" alt="Летний педикюр" loading="lazy"
               decoding="async" onerror="this.style.display='none'">
             <div class="gallery__item-overlay">
               <span class="gallery__item-tag">Педикюр</span>
@@ -518,7 +506,7 @@
 
           <article class="master-card reveal">
             <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-01.jpg" alt="Анна Соколова — старший мастер"
+              <img class="master-card__photo" src="images/masters/master-01.webp" alt="Анна Соколова — старший мастер"
                 loading="lazy" decoding="async" onerror="this.style.display='none'">
               <div class="master-card__overlay" aria-hidden="true">
                 <div class="master-card__skills">
@@ -571,7 +559,7 @@
 
           <article class="master-card reveal">
             <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-02.jpg" alt="Мария Петрова — мастер педикюра"
+              <img class="master-card__photo" src="images/masters/master-02.webp" alt="Мария Петрова — мастер педикюра"
                 loading="lazy" decoding="async" onerror="this.style.display='none'">
               <div class="master-card__overlay" aria-hidden="true">
                 <div class="master-card__skills">
@@ -624,7 +612,7 @@
 
           <article class="master-card reveal">
             <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-03.jpg"
+              <img class="master-card__photo" src="images/masters/master-03.webp"
                 alt="Екатерина Кузнецова — nail-art мастер" loading="lazy" decoding="async"
                 onerror="this.style.display='none'">
               <div class="master-card__overlay" aria-hidden="true">
@@ -678,7 +666,7 @@
 
           <article class="master-card reveal">
             <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-04.jpg"
+              <img class="master-card__photo" src="images/masters/master-04.webp"
                 alt="Юлия Назарова — мастер наращивания" loading="lazy" decoding="async"
                 onerror="this.style.display='none'">
               <div class="master-card__overlay" aria-hidden="true">
@@ -923,9 +911,9 @@
           <article class="service-card service-card--featured reveal" data-service-name="Маникюр">
             <span class="service-card__badge">Хит</span>
             <div class="service-card__image-wrap">
-              <img src="images/services/lp-manicure.png" alt="Маникюр схема"
+              <img src="images/services/lp-manicure.webp" alt="Маникюр схема"
                 class="service-card__img service-card__img--front" loading="lazy">
-              <img src="images/services/service-manicure.jpg" alt="Маникюр"
+              <img src="images/services/service-manicure.webp" alt="Маникюр"
                 class="service-card__img service-card__img--back" loading="lazy">
             </div>
             <div class="service-card__content">
@@ -946,9 +934,9 @@
 
           <article class="service-card reveal" data-service-name="Педикюр">
             <div class="service-card__image-wrap">
-              <img src="images/services/lp-pedicure.png" alt="Педикюр схема"
+              <img src="images/services/lp-pedicure.webp" alt="Педикюр схема"
                 class="service-card__img service-card__img--front" loading="lazy">
-              <img src="images/services/service-pedicure.jpg" alt="Педикюр"
+              <img src="images/services/service-pedicure.webp" alt="Педикюр"
                 class="service-card__img service-card__img--back" loading="lazy">
             </div>
             <div class="service-card__content">
@@ -967,9 +955,9 @@
 
           <article class="service-card reveal" data-service-name="Гель-лак">
             <div class="service-card__image-wrap">
-              <img src="images/services/lp-gel.png" alt="Гель-лак схема"
+              <img src="images/services/lp-gel.webp" alt="Гель-лак схема"
                 class="service-card__img service-card__img--front" loading="lazy">
-              <img src="images/services/service-gel.jpg" alt="Гель-лак"
+              <img src="images/services/service-gel.webp" alt="Гель-лак"
                 class="service-card__img service-card__img--back" loading="lazy">
             </div>
             <div class="service-card__content">
@@ -988,9 +976,9 @@
 
           <article class="service-card reveal" data-service-name="Авторский дизайн">
             <div class="service-card__image-wrap">
-              <img src="images/services/lp-design.png" alt="Авторский дизайн схема"
+              <img src="images/services/lp-design.webp" alt="Авторский дизайн схема"
                 class="service-card__img service-card__img--front" loading="lazy">
-              <img src="images/services/service-design.jpg" alt="Авторский дизайн"
+              <img src="images/services/service-design.webp" alt="Авторский дизайн"
                 class="service-card__img service-card__img--back" loading="lazy">
             </div>
             <div class="service-card__content">
@@ -1009,9 +997,9 @@
 
           <article class="service-card reveal" data-service-name="Наращивание">
             <div class="service-card__image-wrap">
-              <img src="images/services/lp-extension.png" alt="Наращивание схема"
+              <img src="images/services/lp-extension.webp" alt="Наращивание схема"
                 class="service-card__img service-card__img--front" loading="lazy">
-              <img src="images/services/service-extension.jpg" alt="Наращивание"
+              <img src="images/services/service-extension.webp" alt="Наращивание"
                 class="service-card__img service-card__img--back" loading="lazy">
             </div>
             <div class="service-card__content">
@@ -1030,9 +1018,9 @@
 
           <article class="service-card reveal" data-service-name="Полный SPA">
             <div class="service-card__image-wrap">
-              <img src="images/services/lp-care.png" alt="Полный SPA схема"
+              <img src="images/services/lp-care.webp" alt="Полный SPA схема"
                 class="service-card__img service-card__img--front" loading="lazy">
-              <img src="images/services/service-care.png" alt="Полный SPA"
+              <img src="images/services/service-care.webp" alt="Полный SPA"
                 class="service-card__img service-card__img--back" loading="lazy">
             </div>
             <div class="service-card__content">

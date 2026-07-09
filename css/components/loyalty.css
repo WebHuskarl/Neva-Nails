@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    LOYALTY — levels, progress bar, how-it-works
    ============================================================ */
 
@@ -13,7 +13,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../../images/gallery/photo-01.jpg');
+  background-image: url('../../images/gallery/photo-01.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.04;

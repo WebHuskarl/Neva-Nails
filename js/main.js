@@ -11,6 +11,7 @@ import { initTimers }      from './timer.js';
 import { initValidation }  from './validation.js';
 import { initHeroVideo }   from './hero-video.js';
 import { initReviews }    from './reviews.js';
+import { initReveal }     from './reveal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeroVideo();
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initTimers();
   initValidation();
+  initReveal();
 
   /* Animate loyalty bars when they scroll into view */
   const bars = document.querySelectorAll('[data-bar-fill]');

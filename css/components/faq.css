@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    FAQ — accessible accordion
    ============================================================ */
 
@@ -14,7 +14,7 @@
   bottom: 0;
   width: 35rem;
   height: 35rem;
-  background-image: url('../../images/gallery/photo-05.jpg');
+  background-image: url('../../images/gallery/photo-05.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.06;

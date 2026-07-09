@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    SERVICES — asymmetric bento grid + offers banner
    ============================================================ */
 
@@ -28,7 +28,7 @@
   overflow: hidden;
   text-decoration: none;
   background-color: #4D3380;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../images/promo-bg.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../images/promo-bg.webp');
   background-size: 100% 210%;
   background-repeat: no-repeat;
   border: 1px solid rgba(255, 255, 255, 0.2);
