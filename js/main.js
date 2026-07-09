@@ -81,4 +81,50 @@ document.addEventListener('DOMContentLoaded', () => {
       el?.addEventListener('input', updateSteps);
     });
   }
+
+  /* ---- Interactive Services Logic ---- */
+  const serviceCards = document.querySelectorAll('.service-card[data-service-name]');
+  const bookingComment = document.getElementById('comment');
+  const bookingSection = document.getElementById('booking');
+
+  serviceCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Don't override if user clicked on 'Подобрать дизайн' link specifically
+      if (e.target.closest('a')) return;
+      
+      const serviceName = card.dataset.serviceName;
+      if (bookingComment && bookingSection) {
+        bookingSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          bookingComment.value = `Хочу записаться на услугу: ${serviceName}`;
+          bookingComment.focus();
+        }, 500); // Wait for scroll
+      }
+    });
+  });
+
+  /* ---- Loyalty Accordion Certificates ---- */
+  const accordions = document.querySelectorAll('.certificate[data-accordion]');
+  accordions.forEach(acc => {
+    const header = acc.querySelector('.certificate__header');
+    if (header) {
+      header.addEventListener('click', () => {
+        acc.classList.toggle('is-open');
+      });
+    }
+  });
+
+  /* ---- Newbie Button Logic ---- */
+  const newbieBtn = document.getElementById('btn-loyalty-newbie');
+  if (newbieBtn) {
+    newbieBtn.addEventListener('click', () => {
+      if (bookingComment && bookingSection) {
+        bookingSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          bookingComment.value = `Я новый клиент, хочу использовать приветственный бонус по программе лояльности!`;
+          bookingComment.focus();
+        }, 500);
+      }
+    });
+  }
 });

@@ -1,56 +1,6 @@
 /* ============================================================
-   GLOBAL — fonts, base, typography, utilities, grain, reveal
+   GLOBAL — TORN ELEGANCE: sharp typography, angular forms
    ============================================================ */
-
-/* --- Self-hosted fonts --- */
-@font-face {
-  font-family: 'Geologica';
-  src: url('../fonts/geologica-cyr.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'Geologica';
-  src: url('../fonts/geologica-lat.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Golos Text';
-  src: url('../fonts/golos-cyr.woff2') format('woff2');
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'Golos Text';
-  src: url('../fonts/golos-lat.woff2') format('woff2');
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('../fonts/jetbrains-cyr.woff2') format('woff2');
-  font-weight: 400 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('../fonts/jetbrains-lat.woff2') format('woff2');
-  font-weight: 400 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
-}
 
 /* --- Base --- */
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -66,7 +16,7 @@ body {
   position: relative;
 }
 
-/* Subtle grain texture (very faint on light bg) */
+/* Subtle grain texture */
 body::before {
   content: '';
   position: fixed;
@@ -75,7 +25,7 @@ body::before {
   background-size: 200px 200px;
   pointer-events: none;
   z-index: var(--z-toast);
-  opacity: 0.018;
+  opacity: 0.022;
 }
 
 /* --- Container --- */
@@ -88,81 +38,75 @@ body::before {
 
 /* --- Section layout --- */
 .section {
-  padding-block: clamp(4rem, 8vw, 8rem);
+  padding-block: clamp(2.5rem, 4vw, 5.5rem);
   position: relative;
   overflow: hidden;
 }
+.section--raised {
+  background-color: var(--color-bg-raised);
+}
 
-/* Veined hairline divider */
+/* Angular divider between sections */
 .section::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 1px;
-  background: var(--grad-hairline);
-  opacity: 0.25;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-ink) 0%, var(--color-violet) 40%, transparent 80%);
+  opacity: 0.08;
 }
 .section:last-of-type::after { display: none; }
 
-/* Section label */
+/* Section label — angular tag with pipe */
 .section__label {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   font-weight: var(--fw-medium);
   color: var(--color-violet);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--sp-3);
-  margin-bottom: var(--sp-4);
-}
-.section__label::before {
-  content: '';
-  display: inline-block;
-  width: 1.5rem;
-  height: 1px;
-  background: var(--color-violet);
+  margin-bottom: var(--sp-3);
+  padding: 0.25rem 1rem 0.25rem 0;
+  border-left: 3px solid var(--color-violet);
+  padding-left: var(--sp-3);
 }
 
-/* Section title */
+/* Section title — TORN ELEGANCE: uppercase, heavy */
 .section__title {
   font-family: var(--font-display);
   font-size: var(--fs-3xl);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-extrabold);
   line-height: var(--lh-tight);
   color: var(--color-ink);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   text-wrap: balance;
-  margin-bottom: var(--sp-6);
-}
-.section__title--gradient {
-  background: var(--grad-pearl);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: var(--sp-5);
 }
 
-/* Script-font accent word inside section titles */
+/* Accent word in section titles — uses Playfair (script-like) for elegance */
 .section__title-script {
-  font-family: var(--font-script);
-  font-size: 1.12em;
-  font-weight: var(--fw-regular);
   color: var(--color-violet);
-  display: inline-block;
-  line-height: 1;
-  vertical-align: baseline;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  display: inline;
+  letter-spacing: 0;
 }
 
 /* Ghost number */
 .section__ghost {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: var(--fs-ghost);
-  font-weight: var(--fw-extrabold);
+  font-weight: 900;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(124, 92, 255, 0.05);
+  -webkit-text-stroke: 1px rgba(124, 92, 255, 0.04);
   position: absolute;
   right: -2%;
   top: 50%;
@@ -171,6 +115,7 @@ body::before {
   user-select: none;
   line-height: 1;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 /* --- Typography utilities --- */
@@ -185,18 +130,18 @@ body::before {
 .text-lilac    { color: var(--color-violet); }
 .text-mineral  { color: var(--color-teal); }
 
-.text-mono     {
+.text-mono {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 /* --- Card base --- */
 .card {
   background: var(--color-bg-raised);
-  border: var(--border-hairline);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  clip-path: var(--clip-angular);
   padding: var(--sp-8);
   position: relative;
   overflow: hidden;
@@ -206,31 +151,6 @@ body::before {
 .card:hover {
   transform: translateY(-0.25rem);
   box-shadow: var(--shadow-violet);
-  border-color: rgba(124, 92, 255, 0.3);
-}
-
-/* Corner markers */
-.card--cornered::after {
-  content: '';
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-top: 1px solid var(--color-violet);
-  border-right: 1px solid var(--color-violet);
-  opacity: 0.4;
-}
-.card--cornered::before {
-  content: '';
-  position: absolute;
-  bottom: 0.75rem;
-  left: 0.75rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-bottom: 1px solid var(--color-violet);
-  border-left: 1px solid var(--color-violet);
-  opacity: 0.25;
 }
 
 /* --- Buttons --- */
@@ -240,11 +160,12 @@ body::before {
   justify-content: center;
   gap: var(--sp-2);
   padding: 0.875rem 2rem;
-  border-radius: var(--radius-full);
+  clip-path: polygon(0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%, 0 calc(100% - 0.75rem));
   font-family: var(--font-body);
   font-size: var(--fs-sm);
   font-weight: var(--fw-semibold);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: transform var(--transition-spring), box-shadow var(--transition-slow), background var(--transition);
   position: relative;
@@ -268,10 +189,10 @@ body::before {
 .btn--outline {
   background: transparent;
   color: var(--color-ink);
-  border: 1px solid var(--color-border-mid);
+  box-shadow: inset 0 0 0 1.5px var(--color-border-mid);
 }
 .btn--outline:hover {
-  border-color: var(--color-violet);
+  box-shadow: inset 0 0 0 1.5px var(--color-violet);
   color: var(--color-violet);
   background: var(--color-violet-bg);
 }
@@ -280,6 +201,7 @@ body::before {
   background: transparent;
   color: var(--color-violet);
   padding-inline: 0;
+  clip-path: none;
   position: relative;
 }
 .btn--ghost::after {
@@ -288,7 +210,7 @@ body::before {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: var(--color-violet);
   transition: width var(--transition-slow);
 }
@@ -300,25 +222,25 @@ body::before {
   display: block;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-ink-secondary);
   margin-bottom: var(--sp-2);
+  font-weight: var(--fw-medium);
 }
 .form__input,
 .form__select,
 .form__textarea {
   width: 100%;
   background: var(--color-bg-raised);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
   padding: 0.875rem 1.25rem;
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: var(--fs-base);
   transition: border-color var(--transition), box-shadow var(--transition);
   appearance: none;
-  box-shadow: var(--shadow-sm);
 }
 .form__input:focus,
 .form__select:focus,
@@ -344,16 +266,44 @@ body::before {
 .form__group--error .form__textarea { border-color: var(--color-error); }
 .form__group--error .form__error { display: block; }
 
-/* --- Scroll-driven reveal --- */
+/* ============================================================
+   SCROLL-DRIVEN REVEAL ANIMATIONS
+   ============================================================ */
+
+/* --- Reveal: from bottom and side --- */
 @keyframes reveal-up {
-  from { opacity: 0; transform: translateY(2rem); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate(2.5rem, 2.5rem); }
+  to   { opacity: 1; transform: translate(0, 0); }
 }
+
+/* --- Reveal: small label from left pipe (clip) --- */
+@keyframes reveal-from-pipe {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-0.5rem); }
+  to   { opacity: 1; clip-path: inset(0 0% 0 0);   transform: translateX(0); }
+}
+
+/* --- Reveal: fade in --- */
 @keyframes reveal-fade {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
+/* Section label — slides from pipe */
+.reveal-label {
+  animation: reveal-from-pipe both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 30%;
+}
+
+/* Section title — rises from bottom */
+.reveal-title {
+  animation: reveal-up both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 35%;
+  animation-delay: 80ms;
+}
+
+/* Generic reveal cards/items — staggered */
 .reveal {
   animation: reveal-up both;
   animation-timeline: view();
@@ -365,6 +315,7 @@ body::before {
   animation-range: entry 0% entry 35%;
 }
 
+/* Stagger delays for siblings */
 .reveal:nth-child(1) { animation-delay: 0ms; }
 .reveal:nth-child(2) { animation-delay: 80ms; }
 .reveal:nth-child(3) { animation-delay: 160ms; }

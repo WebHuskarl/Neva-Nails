@@ -5,8 +5,8 @@
 .footer {
   background: var(--color-bg-raised);
   border-top: var(--border-hairline);
-  padding-top: var(--sp-16);
-  padding-bottom: var(--sp-8);
+  padding-top: var(--sp-10);
+  padding-bottom: var(--sp-6);
   position: relative;
   overflow: hidden;
 }
@@ -65,11 +65,13 @@
   color: var(--color-pearl);
 }
 .footer__tagline {
+  font-family: var(--font-script);
   font-size: var(--fs-sm);
-  color: var(--color-pearl-dim);
+  font-style: italic;
+  color: var(--color-ink-secondary);
   line-height: var(--lh-relaxed);
   max-width: 22rem;
-  margin-bottom: var(--sp-6);
+  margin-bottom: var(--sp-5);
 }
 
 /* Social links */

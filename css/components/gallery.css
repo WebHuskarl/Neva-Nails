@@ -13,8 +13,8 @@
 }
 .gallery__filter {
   padding: 0.5rem 1.125rem;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-graphite);
+  clip-path: polygon(0 0, calc(100% - 0.5rem) 0, 100% 0.5rem, 100% 100%, 0.5rem 100%, 0 calc(100% - 0.5rem));
+  border: 1px solid var(--color-border);
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   letter-spacing: 0.1em;
@@ -40,7 +40,7 @@
 .gallery__item {
   break-inside: avoid;
   margin-bottom: var(--sp-4);
-  border-radius: var(--radius-lg);
+  clip-path: var(--clip-angular);
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -133,7 +133,8 @@
   max-width: 90vw;
   max-height: 90vh;
   border-radius: var(--radius-xl);
-  overflow: hidden;
+  /* overflow visible so nav arrows outside the img are clickable */
+  overflow: visible;
   box-shadow: var(--shadow-lg);
 }
 .lightbox__img {
@@ -141,7 +142,7 @@
   max-width: 80vw;
   max-height: 80vh;
   object-fit: contain;
-  border-radius: var(--radius-lg);
+  clip-path: var(--clip-angular);
 }
 .lightbox__close {
   position: absolute;
@@ -164,25 +165,33 @@
 .lightbox__close svg { width: 1.125rem; height: 1.125rem; pointer-events: none; }
 
 .lightbox__nav {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  background: rgba(255,255,255,0.9);
-  border: var(--border-hairline);
+  background: rgba(255,255,255,0.95);
+  border: 1.5px solid rgba(124,92,255,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-pearl);
-  transition: background var(--transition), color var(--transition);
+  color: var(--color-ink);
+  transition: background var(--transition), color var(--transition), transform var(--transition-spring), box-shadow var(--transition);
+  z-index: calc(var(--z-modal) + 10);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
-.lightbox__nav:hover { background: var(--color-bg-raised); color: var(--color-violet); }
-.lightbox__nav:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
-.lightbox__nav--prev { left: -3.5rem; }
-.lightbox__nav--next { right: -3.5rem; }
-.lightbox__nav svg { width: 1.125rem; height: 1.125rem; pointer-events: none; }
+.lightbox__nav:hover {
+  background: var(--color-violet);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 1.5rem rgba(124,92,255,0.4);
+}
+.lightbox__nav:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 2px; }
+.lightbox__nav--prev { left: 1.5rem; }
+.lightbox__nav--next { right: 1.5rem; }
+.lightbox__nav svg { width: 1.25rem; height: 1.25rem; pointer-events: none; }
 
 .lightbox__caption {
   padding: var(--sp-4) var(--sp-6);

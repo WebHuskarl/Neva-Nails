@@ -8,13 +8,11 @@
   .hero__actions .btn { width: 100%; justify-content: center; }
   .trust__stats { grid-template-columns: 1fr 1fr; }
   .review-card { width: 16rem; }
-  .lightbox__nav--prev { left: -1rem; }
-  .lightbox__nav--next { right: -1rem; }
 }
 
 /* ---- sm: 400px + ---- */
 @media (min-width: 25rem) {
-  .hero__title { font-size: clamp(3rem, 10vw, 8rem); }
+  .hero__title { font-size: clamp(2.25rem, 7.5vw, 5.25rem); }
 }
 
 /* ---- md: 640px / 40rem ---- */
@@ -54,7 +52,7 @@
 /* ---- xl: 1280px / 80rem ---- */
 @media (min-width: 80rem) {
   .gallery__grid { columns: 4; }
-  .hero__content { padding-block: var(--sp-32) var(--sp-20); }
+  .hero__content { padding-block: var(--sp-20) var(--sp-12); }
 }
 
 /* ---- 2xl: 1536px / 96rem ---- */

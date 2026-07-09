@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LunaNail Studio - премиум маникюрная студия. Авторский дизайн ногтей, мастера международного уровня, онлайн-запись. [Город].">
-  <meta name="theme-color" content="#15161A">
-  <title>LunaNail Studio - Премиум маникюрная студия</title>
+  <meta name="description"
+    content="Neva Nail — премиум маникюрная студия в Санкт-Петербурге. Авторский дизайн ногтей, мастера с 7+ лет опытом, медицинская стерилизация.">
+  <meta name="theme-color" content="#F8F7F4">
+  <title>Neva Nail — Премиум маникюрная студия в Санкт-Петербурге</title>
 
-  <!-- Preload critical fonts -->
-  <link rel="preload" href="fonts/geologica-cyr.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/golos-cyr.woff2" as="font" type="font/woff2" crossorigin>
-
-  <!-- Accent script font -->
+  <!-- Fonts: Unbounded (display) + Manrope (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet">
 
-  <!-- Favicon -->
+  <!-- Favicon — SVG logo converted -->
   <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon/favicon.ico" sizes="any">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -31,16 +30,14 @@
   <link rel="stylesheet" href="css/components/configurator.css">
   <link rel="stylesheet" href="css/components/gallery.css">
   <link rel="stylesheet" href="css/components/masters.css">
-  <link rel="stylesheet" href="css/components/pricing.css">
-  <link rel="stylesheet" href="css/components/offers.css">
   <link rel="stylesheet" href="css/components/loyalty.css">
   <link rel="stylesheet" href="css/components/reviews.css">
   <link rel="stylesheet" href="css/components/booking.css">
-  <link rel="stylesheet" href="css/components/faq.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/modal.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
+
 <body>
 
   <!-- ============================================================
@@ -49,32 +46,35 @@
   <header class="header" role="banner" data-header>
     <div class="header__progress" data-scroll-progress aria-hidden="true"></div>
     <div class="header__inner">
-      <a href="#hero" class="header__logo" aria-label="LunaNail Studio — на главную">
+      <a href="#hero" class="header__logo" aria-label="Neva Nail — на главную">
         <div class="header__logo-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
+          <img src="images/logo/logo.svg" alt="Neva Nail Logo" width="32" height="32" aria-hidden="true">
         </div>
         <div>
-          <span class="header__logo-text">LunaNail</span>
-          <span class="header__logo-sub">Nail Studio</span>
+          <span class="header__logo-text">Neva Nail</span>
         </div>
       </a>
 
       <nav class="header__nav" aria-label="Основная навигация">
         <ul class="nav__list" role="list">
-          <li><a class="nav__link" href="#services" data-nav-link>Услуги</a></li>
           <li><a class="nav__link" href="#gallery" data-nav-link>Портфолио</a></li>
           <li><a class="nav__link" href="#masters" data-nav-link>Мастера</a></li>
-          <li><a class="nav__link" href="#pricing" data-nav-link>Прайс</a></li>
-          <li><a class="nav__link" href="#offers" data-nav-link>Акции</a></li>
+          <li><a class="nav__link" href="#configurator" data-nav-link>Подбор дизайна</a></li>
+          <li><a class="nav__link" href="#services" data-nav-link>Услуги</a></li>
+          <li><a class="nav__link" href="#loyalty" data-nav-link>Лояльность</a></li>
           <li><a class="nav__link" href="#reviews" data-nav-link>Отзывы</a></li>
         </ul>
       </nav>
 
       <div class="header__actions">
         <a href="#booking" class="btn btn--primary header__cta" aria-label="Записаться онлайн">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+            <line x1="16" x2="16" y1="2" y2="6" />
+            <line x1="8" x2="8" y1="2" y2="6" />
+            <line x1="3" x2="21" y1="10" y2="10" />
+          </svg>
           Записаться
         </a>
         <button class="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-burger>
@@ -89,15 +89,18 @@
   <!-- Mobile menu -->
   <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильное меню" data-mobile-menu>
     <button class="mobile-menu__close" aria-label="Закрыть меню" data-mobile-close>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
     </button>
     <ul class="mobile-menu__list" role="list">
-      <li><a class="mobile-menu__link" href="#services" data-mobile-link>Услуги</a></li>
-      <li><a class="mobile-menu__link" href="#configurator" data-mobile-link>Подбор дизайна</a></li>
       <li><a class="mobile-menu__link" href="#gallery" data-mobile-link>Портфолио</a></li>
       <li><a class="mobile-menu__link" href="#masters" data-mobile-link>Мастера</a></li>
-      <li><a class="mobile-menu__link" href="#pricing" data-mobile-link>Прайс</a></li>
-      <li><a class="mobile-menu__link" href="#offers" data-mobile-link>Акции</a></li>
+      <li><a class="mobile-menu__link" href="#configurator" data-mobile-link>Подбор дизайна</a></li>
+      <li><a class="mobile-menu__link" href="#services" data-mobile-link>Услуги</a></li>
+      <li><a class="mobile-menu__link" href="#loyalty" data-mobile-link>Лояльность</a></li>
       <li><a class="mobile-menu__link" href="#reviews" data-mobile-link>Отзывы</a></li>
     </ul>
     <a href="#booking" class="btn btn--primary mobile-menu__cta" data-mobile-link>Записаться онлайн</a>
@@ -111,7 +114,19 @@
     <section class="hero" id="hero" aria-label="Главный экран" data-section="hero">
 
       <div class="hero__video-wrap" aria-hidden="true">
-        <canvas class="hero__canvas" data-hero-canvas></canvas>
+        <div class="hero__video-poster" aria-hidden="true"></div>
+        <video class="hero__video" data-hero-video muted playsinline preload="auto"
+          poster="images/hero/frames/0000.jpg">
+          <source src="images/hero/hero.mp4" type="video/mp4">
+        </video>
+        <!-- Slideshow: shown after video pauses -->
+        <div class="hero__slideshow" data-hero-slideshow aria-hidden="true">
+          <img class="hero__slide" src="images/hero/slide1.jpg" alt="" loading="eager" draggable="false">
+          <img class="hero__slide" src="images/hero/slide2.jpg" alt="" loading="lazy" draggable="false">
+          <img class="hero__slide" src="images/hero/slide3.jpg" alt="" loading="lazy" draggable="false">
+          <img class="hero__slide" src="images/hero/slide4.jpg" alt="" loading="lazy" draggable="false">
+        </div>
+        <div class="hero__wm-cover" aria-hidden="true"></div>
       </div>
 
       <div class="hero__overlay" aria-hidden="true"></div>
@@ -120,7 +135,7 @@
       <div class="hero__content container">
         <div class="hero__main">
           <p class="hero__eyebrow" aria-hidden="true">
-            <span class="text-mono">NAIL STUDIO / САНКТ-ПЕТЕРБУРГ</span>
+            <span class="text-mono">NEVA NAIL / САНКТ-ПЕТЕРБУРГ</span>
           </p>
 
           <h1 class="hero__title">
@@ -129,16 +144,28 @@
           </h1>
 
           <p class="hero__subtitle">
-            Авторский дизайн ногтей, мастера с 7+ лет опытом и медицинская стерилизация — в одной студии в Санкт-Петербурге
+            Авторский дизайн ногтей, мастера с 7+ лет опытом и медицинская стерилизация — в одной студии в
+            Санкт-Петербурге
           </p>
 
           <div class="hero__actions">
             <a href="#booking" class="btn btn--primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
               Записаться онлайн
             </a>
             <a href="#gallery" class="btn btn--outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+                <circle cx="9" cy="9" r="2" />
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+              </svg>
               Смотреть работы
             </a>
           </div>
@@ -160,24 +187,52 @@
         </div>
       </div>
 
-      <!-- Pearl badge — ссылка на запись -->
-      <a href="#booking" class="hero__badge" aria-label="Записаться онлайн — Премиум студия">
-        <div class="hero__badge-circle">
+      <!-- Pearl badge — social icons fly up on hover -->
+      <div class="hero__badge" id="hero-badge">
+        <div class="hero__badge-socials">
+          <!-- Instagram -->
+          <a href="#" class="hero__badge-social hero__badge-social--ig" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+          <!-- Telegram -->
+          <a href="#" class="hero__badge-social hero__badge-social--tg" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="#" class="hero__badge-social hero__badge-social--wa" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 21 4.5 15a8.955 8.955 0 1 1 3.315 3.315Z" />
+            </svg>
+          </a>
+        </div>
+        <a href="#booking" class="hero__badge-circle" aria-label="Записаться онлайн — Премиум студия">
           <div class="hero__badge-text">
             <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <path id="badgePath" d="M 60,60 m -47,0 a 47,47 0 1,1 94,0 a 47,47 0 1,1 -94,0"/>
+                <path id="badgePath" d="M 60,60 m -47,0 a 47,47 0 1,1 94,0 a 47,47 0 1,1 -94,0" />
               </defs>
               <text>
                 <textPath href="#badgePath">ЗАПИСЬ ОНЛАЙН &bull; ПРЕМИУМ &bull; </textPath>
               </text>
             </svg>
           </div>
-          <svg class="hero__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+          <svg class="hero__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
           </svg>
-        </div>
-      </a>
+        </a>
+      </div>
     </section>
 
 
@@ -208,23 +263,121 @@
       <div class="trust__marquee" aria-label="Бренды и качества">
         <div class="marquee">
           <div class="marquee__track" aria-hidden="true">
-            <span class="trust__brand"><span class="trust__brand-dot"></span>OPI</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>CND Shellac</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Gelish</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>IBD</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Sterilisation Pro</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Naomi</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Kiara Sky</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Bio Sculpture</span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
+              OPI
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              CND Shellac
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+              Gelish
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+              </svg>
+              IBD
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z" />
+              </svg>
+              Sterilisation Pro
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+              Naomi
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z" />
+              </svg>
+              Kiara Sky
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+                <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+              </svg>
+              Bio Sculpture
+            </span>
             <!-- Duplicate for seamless loop -->
-            <span class="trust__brand"><span class="trust__brand-dot"></span>OPI</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>CND Shellac</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Gelish</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>IBD</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Sterilisation Pro</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Naomi</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Kiara Sky</span>
-            <span class="trust__brand"><span class="trust__brand-dot"></span>Bio Sculpture</span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
+              OPI
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              CND Shellac
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+              Gelish
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+              </svg>
+              IBD
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z" />
+              </svg>
+              Sterilisation Pro
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+              Naomi
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z" />
+              </svg>
+              Kiara Sky
+            </span>
+            <span class="trust__brand">
+              <svg class="trust__brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+                <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+              </svg>
+              Bio Sculpture
+            </span>
           </div>
         </div>
       </div>
@@ -232,99 +385,396 @@
 
 
     <!-- ============================================================
-         SERVICES
+         PORTFOLIO / GALLERY
          ============================================================ -->
-    <section class="section services" id="services" data-section="services">
+    <section class="section gallery" id="gallery" data-section="gallery">
       <div class="container">
-        <p class="section__label">Услуги</p>
-        <h2 class="section__title">Всё для идеальных ногтей</h2>
+        <p class="section__label reveal-label">Портфолио</p>
+        <h2 class="section__title reveal-title">Работы <span class="section__title-script">мастеров</span></h2>
 
-        <div class="services__grid">
+        <div class="gallery__filters" role="list" aria-label="Фильтры галереи">
+          <button class="gallery__filter is-active" data-filter="all" role="listitem">Все работы</button>
+          <button class="gallery__filter" data-filter="manicure" role="listitem">Маникюр</button>
+          <button class="gallery__filter" data-filter="design" role="listitem">Дизайн</button>
+          <button class="gallery__filter" data-filter="pedicure" role="listitem">Педикюр</button>
+          <button class="gallery__filter" data-filter="extension" role="listitem">Наращивание</button>
+        </div>
 
-          <!-- Wide featured card -->
-          <article class="service-card service-card--featured service-card--wide reveal" data-service>
-            <span class="service-card__badge">Хит</span>
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <div class="gallery__grid" data-gallery-grid>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="manicure design" role="button"
+            aria-label="Открыть работу: Нюд-градиент с перламутром" tabindex="0"
+            data-lightbox-src="images/gallery/photo-01.jpg" data-lightbox-tag="Дизайн"
+            data-lightbox-title="Нежный нюд с перламутровым градиентом">
+            <img class="gallery__img" src="images/gallery/photo-01.jpg" alt="Маникюр - миндаль с градиентом"
+              loading="lazy" decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Дизайн</span>
+              <span class="gallery__item-title">Нюд-градиент</span>
             </div>
-            <h3 class="service-card__title">Маникюр классический и аппаратный</h3>
-            <p class="service-card__desc">Безупречная форма, здоровые ногти. Комбинированный и аппаратный маникюр с подготовкой под покрытие или без — на выбор.</p>
-            <div class="service-card__footer">
-              <div class="service-card__price">от <span>2 200 ₽</span></div>
-              <a href="#booking" class="service-card__cta" aria-label="Записаться на маникюр">
-                Записаться
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-              </a>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design" role="button"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-02.jpg"
+            data-lightbox-tag="Дизайн" data-lightbox-title="Минимализм с золотым декором">
+            <img class="gallery__img" src="images/gallery/photo-02.jpg" alt="Авторский дизайн" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Авторский дизайн</span>
+              <span class="gallery__item-title">Смотреть работу</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="manicure" role="button"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-03.jpg"
+            data-lightbox-tag="Маникюр" data-lightbox-title="Идеальная форма — классика">
+            <img class="gallery__img" src="images/gallery/photo-03.jpg" alt="Маникюр классика" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Маникюр</span>
+              <span class="gallery__item-title">Смотреть работу</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="pedicure" role="button"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-04.jpg"
+            data-lightbox-tag="Педикюр" data-lightbox-title="SPA-педикюр с покрытием">
+            <img class="gallery__img" src="images/gallery/photo-04.jpg" alt="SPA педикюр" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Педикюр</span>
+              <span class="gallery__item-title">Смотреть работу</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="extension design" role="button"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-05.jpg"
+            data-lightbox-tag="Наращивание" data-lightbox-title="Наращивание — алмондная форма">
+            <img class="gallery__img" src="images/gallery/photo-05.jpg" alt="Наращивание миндаль" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Наращивание</span>
+              <span class="gallery__item-title">Смотреть работу</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design manicure" role="button"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-06.jpg"
+            data-lightbox-tag="Дизайн" data-lightbox-title="Авторский дизайн">
+            <img class="gallery__img" src="images/gallery/photo-06.jpg" alt="Авторский дизайн" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Дизайн</span>
+              <span class="gallery__item-title">Смотреть работу</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design manicure" role="button"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-07.jpg"
+            data-lightbox-tag="Дизайн" data-lightbox-title="Осенний nail-art с листьями">
+            <img class="gallery__img" src="images/gallery/photo-07.jpg" alt="Осенний nail-art" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Осенний дизайн</span>
+              <span class="gallery__item-title">Смотреть работу</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design" role="button"
+            aria-label="Открыть работу" tabindex="0" data-lightbox-src="images/gallery/photo-08.jpg"
+            data-lightbox-tag="Дизайн" data-lightbox-title="Chrome-эффект на базе лиловый">
+            <img class="gallery__img" src="images/gallery/photo-08.jpg" alt="Chrome дизайн" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Chrome</span>
+              <span class="gallery__item-title">Смотреть работу</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="pedicure" role="button"
+            aria-label="Открыть работу: Педикюр нюд" tabindex="0" data-lightbox-src="images/gallery/photo-09.jpg"
+            data-lightbox-tag="Педикюр" data-lightbox-title="Нежный нюд-педикюр">
+            <img class="gallery__img" src="images/gallery/photo-09.jpg" alt="Педикюр нюд" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Педикюр</span>
+              <span class="gallery__item-title">Нюд-педикюр</span>
+            </div>
+          </a>
+
+          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="pedicure" role="button"
+            aria-label="Открыть работу: Летний педикюр" tabindex="0" data-lightbox-src="images/gallery/photo-10.jpg"
+            data-lightbox-tag="Педикюр" data-lightbox-title="Яркий летний педикюр">
+            <img class="gallery__img" src="images/gallery/photo-10.jpg" alt="Летний педикюр" loading="lazy"
+              decoding="async" onerror="this.style.display='none'">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-tag">Педикюр</span>
+              <span class="gallery__item-title">Летний педикюр</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox modal with prev/next arrows -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр работы" data-lightbox>
+      <div class="lightbox__inner">
+        <button class="lightbox__close" aria-label="Закрыть" data-lightbox-close>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+        <button class="lightbox__nav lightbox__nav--prev" aria-label="Предыдущее фото" data-lightbox-prev>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <img class="lightbox__img" src="" alt="" data-lightbox-img>
+        <button class="lightbox__nav lightbox__nav--next" aria-label="Следующее фото" data-lightbox-next>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
+        <div class="lightbox__caption">
+          <p class="lightbox__caption-tag" data-lightbox-tag-text></p>
+          <p class="lightbox__caption-title" data-lightbox-title-text></p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============================================================
+         MASTERS
+         ============================================================ -->
+    <section class="section section--raised masters" id="masters" data-section="masters">
+      <div class="container">
+        <p class="section__label reveal-label">Команда</p>
+        <h2 class="section__title reveal-title">Мастера студии</h2>
+
+        <div class="masters__grid">
+
+          <article class="master-card reveal">
+            <div class="master-card__photo-wrap">
+              <img class="master-card__photo" src="images/masters/master-01.jpg" alt="Анна Соколова — старший мастер"
+                loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <div class="master-card__overlay" aria-hidden="true">
+                <div class="master-card__skills">
+                  <span class="master-card__skill">Nail-art</span>
+                  <span class="master-card__skill">Дизайн</span>
+                  <span class="master-card__skill">Наращивание</span>
+                </div>
+              </div>
+            </div>
+            <div class="master-card__info">
+              <h3 class="master-card__name">Анна Соколова</h3>
+              <p class="master-card__role">Старший мастер</p>
+              <div class="master-card__meta">
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">8+</span>
+                  <span class="master-card__meta-label">лет опыта</span>
+                </div>
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">3200+</span>
+                  <span class="master-card__meta-label">клиентов</span>
+                </div>
+              </div>
+              <div class="master-card__rating" aria-label="Рейтинг 5 из 5">
+                <div class="master-card__stars" aria-hidden="true">
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <span class="master-card__rating-count">(415 отзывов)</span>
+              </div>
             </div>
           </article>
 
-          <!-- Standard card: Pedikur -->
-          <article class="service-card reveal" data-service>
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>
+          <article class="master-card reveal">
+            <div class="master-card__photo-wrap">
+              <img class="master-card__photo" src="images/masters/master-02.jpg" alt="Мария Петрова — мастер педикюра"
+                loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <div class="master-card__overlay" aria-hidden="true">
+                <div class="master-card__skills">
+                  <span class="master-card__skill">Педикюр</span>
+                  <span class="master-card__skill">Spa-уход</span>
+                  <span class="master-card__skill">Гель-лак</span>
+                </div>
+              </div>
             </div>
-            <h3 class="service-card__title">Педикюр</h3>
-            <p class="service-card__desc">Профессиональный аппаратный педикюр + SPA-уход за кожей стоп. Покрытие гель-лаком в стоимость.</p>
-            <div class="service-card__footer">
-              <div class="service-card__price">от <span>2 800 ₽</span></div>
-              <a href="#booking" class="service-card__cta" aria-label="Записаться на педикюр">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+            <div class="master-card__info">
+              <h3 class="master-card__name">Мария Петрова</h3>
+              <p class="master-card__role">Мастер педикюра</p>
+              <div class="master-card__meta">
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">6+</span>
+                  <span class="master-card__meta-label">лет опыта</span>
+                </div>
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">2400+</span>
+                  <span class="master-card__meta-label">клиентов</span>
+                </div>
+              </div>
+              <div class="master-card__rating" aria-label="Рейтинг 5 из 5">
+                <div class="master-card__stars" aria-hidden="true">
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <span class="master-card__rating-count">(328 отзывов)</span>
+              </div>
             </div>
           </article>
 
-          <!-- Standard card: Gel coat -->
-          <article class="service-card reveal" data-service>
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          <article class="master-card reveal">
+            <div class="master-card__photo-wrap">
+              <img class="master-card__photo" src="images/masters/master-03.jpg"
+                alt="Екатерина Кузнецова — nail-art мастер" loading="lazy" decoding="async"
+                onerror="this.style.display='none'">
+              <div class="master-card__overlay" aria-hidden="true">
+                <div class="master-card__skills">
+                  <span class="master-card__skill">Акварель</span>
+                  <span class="master-card__skill">3D-дизайн</span>
+                  <span class="master-card__skill">Кристаллы</span>
+                </div>
+              </div>
             </div>
-            <h3 class="service-card__title">Гель-лак и покрытие</h3>
-            <p class="service-card__desc">Покрытие топовыми брендами (OPI, CND, Gelish). Держится 3+ недели без сколов.</p>
-            <div class="service-card__footer">
-              <div class="service-card__price">от <span>1 200 ₽</span></div>
-              <a href="#booking" class="service-card__cta" aria-label="Записаться на гель-лак">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+            <div class="master-card__info">
+              <h3 class="master-card__name">Екатерина Кузнецова</h3>
+              <p class="master-card__role">Nail-art мастер</p>
+              <div class="master-card__meta">
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">5+</span>
+                  <span class="master-card__meta-label">лет опыта</span>
+                </div>
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">1850+</span>
+                  <span class="master-card__meta-label">клиентов</span>
+                </div>
+              </div>
+              <div class="master-card__rating" aria-label="Рейтинг 5 из 5">
+                <div class="master-card__stars" aria-hidden="true">
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <span class="master-card__rating-count">(274 отзыва)</span>
+              </div>
             </div>
           </article>
 
-          <!-- Tall card: Design -->
-          <article class="service-card service-card--tall reveal" data-service>
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <article class="master-card reveal">
+            <div class="master-card__photo-wrap">
+              <img class="master-card__photo" src="images/masters/master-04.jpg"
+                alt="Юлия Назарова — мастер наращивания" loading="lazy" decoding="async"
+                onerror="this.style.display='none'">
+              <div class="master-card__overlay" aria-hidden="true">
+                <div class="master-card__skills">
+                  <span class="master-card__skill">Наращивание</span>
+                  <span class="master-card__skill">Укрепление</span>
+                  <span class="master-card__skill">Gel-X</span>
+                </div>
+              </div>
             </div>
-            <h3 class="service-card__title">Авторский дизайн</h3>
-            <p class="service-card__desc">Nail-art любой сложности: акварель, объём, кристаллы, фольга, аэрография, индивидуальные эскизы по вашей идее.</p>
-            <div class="service-card__footer">
-              <div class="service-card__price">от <span>800 ₽</span></div>
-              <a href="#configurator" class="service-card__cta" aria-label="Подобрать дизайн">Подобрать дизайн<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
-            </div>
-          </article>
-
-          <!-- Standard card: Naraschivanie -->
-          <article class="service-card reveal" data-service>
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
-            </div>
-            <h3 class="service-card__title">Наращивание</h3>
-            <p class="service-card__desc">Наращивание на формах и типсах: акрил, полигель, биогель, Gel-X. Любая длина, форма и дизайн.</p>
-            <div class="service-card__footer">
-              <div class="service-card__price">от <span>4 500 ₽</span></div>
-              <a href="#booking" class="service-card__cta" aria-label="Записаться на наращивание">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
-            </div>
-          </article>
-
-          <!-- Standard card: Care -->
-          <article class="service-card reveal" data-service>
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3h15"/><path d="M6 3v11.5a5.5 5.5 0 0 0 11 0V3"/><path d="M6 8h12"/></svg>
-            </div>
-            <h3 class="service-card__title">Уход за ногтями</h3>
-            <p class="service-card__desc">Восстановление и укрепление ногтевой пластины, парафинотерапия, питательные маски для рук.</p>
-            <div class="service-card__footer">
-              <div class="service-card__price">от <span>900 ₽</span></div>
-              <a href="#booking" class="service-card__cta" aria-label="Записаться на уход">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+            <div class="master-card__info">
+              <h3 class="master-card__name">Юлия Назарова</h3>
+              <p class="master-card__role">Мастер наращивания</p>
+              <div class="master-card__meta">
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">4+</span>
+                  <span class="master-card__meta-label">лет опыта</span>
+                </div>
+                <div class="master-card__meta-item">
+                  <span class="master-card__meta-value">1200+</span>
+                  <span class="master-card__meta-label">клиентов</span>
+                </div>
+              </div>
+              <div class="master-card__rating" aria-label="Рейтинг 5 из 5">
+                <div class="master-card__stars" aria-hidden="true">
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <span class="master-card__rating-count">(156 отзывов)</span>
+              </div>
             </div>
           </article>
 
         </div>
-        
+
       </div>
     </section>
 
@@ -334,8 +784,8 @@
          ============================================================ -->
     <section class="section configurator" id="configurator" data-section="configurator">
       <div class="container">
-        <p class="section__label">Подбор дизайна</p>
-        <h2 class="section__title">Создай свои ногти</h2>
+        <p class="section__label reveal-label">Подбор дизайна</p>
+        <h2 class="section__title reveal-title">Создай свои <span class="section__title-script">ногти</span></h2>
 
         <div class="configurator__layout">
 
@@ -384,44 +834,45 @@
               </div>
             </fieldset>
 
-            <!-- Season -->
+            <!-- Occasion (discount) -->
             <fieldset class="config-group">
-              <legend class="config-group__label">Повод <span class="config-group__hint">— скидка при наличии документа</span></legend>
+              <legend class="config-group__label">Повод <span class="config-group__hint">— скидка при наличии
+                  документа</span></legend>
               <div class="config-group__options">
                 <label class="config-option">
                   <input type="radio" name="season" value="everyday" checked>
                   <span class="config-option__label">Каждый день</span>
                 </label>
                 <label class="config-option">
-                  <input type="radio" name="season" value="birthday" data-discount="10" data-discount-note="Предъявите документ с датой рождения (паспорт/другой)">
-                  <span class="config-option__label">День рождения −10%</span>
+                  <input type="radio" name="season" value="birthday" data-discount="20"
+                    data-discount-note="Предъявите документ с датой рождения (паспорт/другой)">
+                  <span class="config-option__label">День рождения −20%</span>
                 </label>
                 <label class="config-option">
-                  <input type="radio" name="season" value="wedding" data-discount="15" data-discount-note="Предъявите свидетельство о браке или приглашение">
+                  <input type="radio" name="season" value="wedding" data-discount="15"
+                    data-discount-note="Предъявите свидетельство о браке или приглашение">
                   <span class="config-option__label">Свадьба / Годовщина −15%</span>
                 </label>
                 <label class="config-option">
-                  <input type="radio" name="season" value="holiday" data-discount="7" data-discount-note="Для праздников: Новый год, 8 марта, выпускной">
+                  <input type="radio" name="season" value="holiday" data-discount="7"
+                    data-discount-note="Для праздников: Новый год, 8 марта, выпускной">
                   <span class="config-option__label">Праздник −7%</span>
                 </label>
                 <label class="config-option">
-                  <input type="radio" name="season" value="corporate" data-discount="10" data-discount-note="Корпоративная скидка при записи от 3 человек">
+                  <input type="radio" name="season" value="corporate" data-discount="10"
+                    data-discount-note="Корпоративная скидка при записи от 3 человек">
                   <span class="config-option__label">Корпоратив −10%</span>
                 </label>
               </div>
             </fieldset>
 
-            <!-- Colors -->
+            <!-- Colors — without white and pink -->
             <fieldset class="config-group">
               <legend class="config-group__label">Цвет</legend>
               <div class="config-colors" data-config-colors>
                 <label class="config-color">
                   <input type="radio" name="color" value="nude" data-color-hex="#C9A98B" data-color-name="Nude" checked>
                   <span class="config-color__swatch" style="background:#C9A98B;" title="Nude"></span>
-                </label>
-                <label class="config-color">
-                  <input type="radio" name="color" value="pink" data-color-hex="#F4A7B9" data-color-name="Розовый">
-                  <span class="config-color__swatch" style="background:#F4A7B9;" title="Розовый"></span>
                 </label>
                 <label class="config-color">
                   <input type="radio" name="color" value="red" data-color-hex="#C0392B" data-color-name="Красный">
@@ -436,20 +887,27 @@
                   <span class="config-color__swatch" style="background:#B9A0FF;" title="Лиловый"></span>
                 </label>
                 <label class="config-color">
-                  <input type="radio" name="color" value="black" data-color-hex="#1A1A2E" data-color-name="Чёрный">
-                  <span class="config-color__swatch" style="background:#1A1A2E; border:1px solid #3A3C48;" title="Чёрный"></span>
+                  <input type="radio" name="color" value="violet" data-color-hex="#7C5CFF" data-color-name="Фиолетовый">
+                  <span class="config-color__swatch" style="background:#7C5CFF;" title="Фиолетовый"></span>
                 </label>
                 <label class="config-color">
-                  <input type="radio" name="color" value="white" data-color-hex="#F0EDE8" data-color-name="Молочный">
-                  <span class="config-color__swatch" style="background:#F0EDE8; border:1px solid #3A3C48;" title="Молочный"></span>
+                  <input type="radio" name="color" value="black" data-color-hex="#1A1A2E" data-color-name="Чёрный">
+                  <span class="config-color__swatch" style="background:#1A1A2E; border:1px solid #3A3C48;"
+                    title="Чёрный"></span>
                 </label>
                 <label class="config-color">
                   <input type="radio" name="color" value="teal" data-color-hex="#58E0C4" data-color-name="Минерал">
                   <span class="config-color__swatch" style="background:#58E0C4;" title="Минерал"></span>
                 </label>
                 <label class="config-color">
-                  <input type="radio" name="color" value="gradient" data-color-hex="linear-gradient(135deg,#B9A0FF,#58E0C4)" data-color-name="Градиент">
-                  <span class="config-color__swatch" style="background:linear-gradient(135deg,#B9A0FF,#58E0C4);" title="Градиент"></span>
+                  <input type="radio" name="color" value="coral" data-color-hex="#E8715A" data-color-name="Коралл">
+                  <span class="config-color__swatch" style="background:#E8715A;" title="Коралл"></span>
+                </label>
+                <label class="config-color">
+                  <input type="radio" name="color" value="gradient"
+                    data-color-hex="linear-gradient(135deg,#B9A0FF,#58E0C4)" data-color-name="Градиент">
+                  <span class="config-color__swatch" style="background:linear-gradient(135deg,#B9A0FF,#58E0C4);"
+                    title="Градиент"></span>
                 </label>
               </div>
             </fieldset>
@@ -474,498 +932,174 @@
                 <p class="configurator__discount-note" data-config-discount-note></p>
               </div>
               <a href="#booking" class="btn btn--primary" data-config-book>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                </svg>
                 Записаться с этим дизайном
               </a>
             </div>
           </div>
 
         </div>
-        
+
       </div>
     </section>
 
 
     <!-- ============================================================
-         PORTFOLIO / GALLERY
+         SERVICES + OFFERS + PRICING — unified section
          ============================================================ -->
-    <section class="section gallery" id="gallery" data-section="gallery">
+    <section class="section section--raised services" id="services" data-section="services">
       <div class="container">
-        <p class="section__label">Портфолио</p>
-        <h2 class="section__title">Работы <span class="section__title-script">мастеров</span></h2>
+        <p class="section__label reveal-label">Услуги &amp; Прайс</p>
+        <h2 class="section__title reveal-title">Всё для идеальных <span class="section__title-script">ногтей</span></h2>
 
-        <div class="gallery__filters" role="list" aria-label="Фильтры галереи">
-          <button class="gallery__filter is-active" data-filter="all" role="listitem">Все работы</button>
-          <button class="gallery__filter" data-filter="manicure" role="listitem">Маникюр</button>
-          <button class="gallery__filter" data-filter="design" role="listitem">Дизайн</button>
-          <button class="gallery__filter" data-filter="pedicure" role="listitem">Педикюр</button>
-          <button class="gallery__filter" data-filter="extension" role="listitem">Наращивание</button>
-        </div>
-
-        <div class="gallery__grid" data-gallery-grid>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="manicure design"
-             role="button" aria-label="Открыть работу: Нюд-градиент с перламутром"
-             tabindex="0" data-lightbox-src="images/gallery/photo-01.jpg" data-lightbox-tag="Дизайн" data-lightbox-title="Нежный нюд с перламутровым градиентом">
-            <img class="gallery__img" src="images/gallery/photo-01.jpg" alt="Маникюр - миндаль с градиентом" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Дизайн</span>
-              <span class="gallery__item-title">Нюд-градиент</span>
+        <!-- Акции-баннер сверху -->
+        <div class="offers-banner reveal">
+          <div class="offers-banner__inner">
+            <div class="offers-banner__item">
+              <span class="offers-banner__tag">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+                Акция до 31 июля
+              </span>
+              <p class="offers-banner__text">Маникюр + дизайн — <strong>2 900 ₽</strong> <s>3 900 ₽</s></p>
             </div>
-          </a>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design"
-             role="button" aria-label="Открыть работу" tabindex="0"
-             data-lightbox-src="images/gallery/photo-02.jpg" data-lightbox-tag="Дизайн" data-lightbox-title="Минимализм с золотым декором">
-            <img class="gallery__img" src="images/gallery/photo-02.jpg" alt="[Описание работы - клиент даст]" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Авторский дизайн</span>
-              <span class="gallery__item-title">Смотреть работу</span>
-            </div>
-          </a>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="manicure"
-             role="button" aria-label="Открыть работу" tabindex="0"
-             data-lightbox-src="images/gallery/photo-03.jpg" data-lightbox-tag="Маникюр" data-lightbox-title="Идеальная форма — классика">
-            <img class="gallery__img" src="images/gallery/photo-03.jpg" alt="[Описание работы - клиент даст]" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Маникюр</span>
-              <span class="gallery__item-title">Смотреть работу</span>
-            </div>
-          </a>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="pedicure"
-             role="button" aria-label="Открыть работу" tabindex="0"
-             data-lightbox-src="images/gallery/photo-04.jpg" data-lightbox-tag="Педикюр" data-lightbox-title="SPA-педикюр с покрытием">
-            <img class="gallery__img" src="images/gallery/photo-04.jpg" alt="[Описание работы - клиент даст]" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Педикюр</span>
-              <span class="gallery__item-title">Смотреть работу</span>
-            </div>
-          </a>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="extension design"
-             role="button" aria-label="Открыть работу" tabindex="0"
-             data-lightbox-src="images/gallery/photo-05.jpg" data-lightbox-tag="Наращивание" data-lightbox-title="Наращивание — алмондная форма">
-            <img class="gallery__img" src="images/gallery/photo-05.jpg" alt="[Описание работы - клиент даст]" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Наращивание</span>
-              <span class="gallery__item-title">Смотреть работу</span>
-            </div>
-          </a>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design manicure"
-             role="button" aria-label="Открыть работу" tabindex="0"
-             data-lightbox-src="images/gallery/photo-06.jpg" data-lightbox-tag="Дизайн" data-lightbox-title="[Описание - клиент даст]">
-            <img class="gallery__img" src="images/gallery/photo-06.jpg" alt="[Описание работы - клиент даст]" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Дизайн</span>
-              <span class="gallery__item-title">Смотреть работу</span>
-            </div>
-          </a>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design manicure"
-             role="button" aria-label="Открыть работу" tabindex="0"
-             data-lightbox-src="images/gallery/photo-07.jpg" data-lightbox-tag="Дизайн" data-lightbox-title="Осенний nail-art с листьями">
-            <img class="gallery__img" src="images/gallery/photo-07.jpg" alt="[Описание работы - клиент даст]" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Осенний дизайн</span>
-              <span class="gallery__item-title">Смотреть работу</span>
-            </div>
-          </a>
-
-          <a href="#" class="gallery__item reveal" data-gallery-item data-tags="design"
-             role="button" aria-label="Открыть работу" tabindex="0"
-             data-lightbox-src="images/gallery/photo-08.jpg" data-lightbox-tag="Дизайн" data-lightbox-title="Chrome-эффект на базе лиловый">
-            <img class="gallery__img" src="images/gallery/photo-08.jpg" alt="[Описание работы - клиент даст]" loading="lazy" decoding="async" onerror="this.style.display='none'">
-            <div class="gallery__item-overlay">
-              <span class="gallery__item-tag">Chrome</span>
-              <span class="gallery__item-title">Смотреть работу</span>
-            </div>
-          </a>
-
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Lightbox modal -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр работы" data-lightbox>
-      <div class="lightbox__inner">
-        <button class="lightbox__close" aria-label="Закрыть" data-lightbox-close>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-        <button class="lightbox__nav lightbox__nav--prev" aria-label="Предыдущее фото" data-lightbox-prev>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        </button>
-        <img class="lightbox__img" src="" alt="" data-lightbox-img>
-        <button class="lightbox__nav lightbox__nav--next" aria-label="Следующее фото" data-lightbox-next>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-        </button>
-        <div class="lightbox__caption">
-          <p class="lightbox__caption-tag" data-lightbox-tag-text></p>
-          <p class="lightbox__caption-title" data-lightbox-title-text></p>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- ============================================================
-         MASTERS
-         ============================================================ -->
-    <section class="section masters" id="masters" data-section="masters">
-      <div class="container">
-        <p class="section__label">Команда</p>
-        <h2 class="section__title">Мастера студии</h2>
-
-        <div class="masters__grid">
-
-          <article class="master-card reveal">
-            <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-01.jpg" alt="Анна Соколова — старший мастер" loading="lazy" decoding="async" onerror="this.style.display='none'">
-              <div class="master-card__overlay" aria-hidden="true">
-                <div class="master-card__skills">
-                  <span class="master-card__skill">Nail-art</span>
-                  <span class="master-card__skill">Дизайн</span>
-                  <span class="master-card__skill">Наращивание</span>
-                </div>
-              </div>
-            </div>
-            <div class="master-card__info">
-              <h3 class="master-card__name">Анна Соколова</h3>
-              <p class="master-card__role">Старший мастер</p>
-              <div class="master-card__meta">
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">8+</span>
-                  <span class="master-card__meta-label">лет опыта</span>
-                </div>
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">2500+</span>
-                  <span class="master-card__meta-label">клиентов</span>
-                </div>
-              </div>
-              <div class="master-card__rating" aria-label="Рейтинг 5 из 5">
-                <div class="master-card__stars" aria-hidden="true">
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <span class="master-card__rating-count">(156 отзывов)</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="master-card reveal">
-            <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-02.jpg" alt="Мария Петрова — мастер педикюра" loading="lazy" decoding="async" onerror="this.style.display='none'">
-              <div class="master-card__overlay" aria-hidden="true">
-                <div class="master-card__skills">
-                  <span class="master-card__skill">Педикюр</span>
-                  <span class="master-card__skill">Spa-уход</span>
-                  <span class="master-card__skill">Гель-лак</span>
-                </div>
-              </div>
-            </div>
-            <div class="master-card__info">
-              <h3 class="master-card__name">Мария Петрова</h3>
-              <p class="master-card__role">Мастер педикюра</p>
-              <div class="master-card__meta">
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">6+</span>
-                  <span class="master-card__meta-label">лет опыта</span>
-                </div>
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">1800+</span>
-                  <span class="master-card__meta-label">клиентов</span>
-                </div>
-              </div>
-              <div class="master-card__rating" aria-label="Рейтинг 5 из 5">
-                <div class="master-card__stars" aria-hidden="true">
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <span class="master-card__rating-count">(156 отзывов)</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="master-card reveal">
-            <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-03.jpg" alt="Екатерина Кузнецова — nail-art мастер" loading="lazy" decoding="async" onerror="this.style.display='none'">
-              <div class="master-card__overlay" aria-hidden="true">
-                <div class="master-card__skills">
-                  <span class="master-card__skill">Акварель</span>
-                  <span class="master-card__skill">3D-дизайн</span>
-                  <span class="master-card__skill">Кристаллы</span>
-                </div>
-              </div>
-            </div>
-            <div class="master-card__info">
-              <h3 class="master-card__name">Екатерина Кузнецова</h3>
-              <p class="master-card__role">Nail-art мастер</p>
-              <div class="master-card__meta">
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">5+</span>
-                  <span class="master-card__meta-label">лет опыта</span>
-                </div>
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">1400+</span>
-                  <span class="master-card__meta-label">клиентов</span>
-                </div>
-              </div>
-              <div class="master-card__rating" aria-label="Рейтинг 5 из 5">
-                <div class="master-card__stars" aria-hidden="true">
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <span class="master-card__rating-count">(156 отзывов)</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="master-card reveal">
-            <div class="master-card__photo-wrap">
-              <img class="master-card__photo" src="images/masters/master-04.jpg" alt="Юлия Назарова — мастер наращивания" loading="lazy" decoding="async" onerror="this.style.display='none'">
-              <div class="master-card__overlay" aria-hidden="true">
-                <div class="master-card__skills">
-                  <span class="master-card__skill">Наращивание</span>
-                  <span class="master-card__skill">Укрепление</span>
-                  <span class="master-card__skill">Gel-X</span>
-                </div>
-              </div>
-            </div>
-            <div class="master-card__info">
-              <h3 class="master-card__name">Юлия Назарова</h3>
-              <p class="master-card__role">Мастер наращивания</p>
-              <div class="master-card__meta">
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">4+</span>
-                  <span class="master-card__meta-label">лет опыта</span>
-                </div>
-                <div class="master-card__meta-item">
-                  <span class="master-card__meta-value">900+</span>
-                  <span class="master-card__meta-label">клиентов</span>
-                </div>
-              </div>
-              <div class="master-card__rating" aria-label="Рейтинг [X] из 5">
-                <div class="master-card__stars" aria-hidden="true">
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg class="master-card__star master-card__star--empty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <span class="master-card__rating-count">(156 отзывов)</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-        
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         PRICING
-         ============================================================ -->
-    <section class="section pricing" id="pricing" data-section="pricing">
-      <div class="container">
-        <p class="section__label">Прайс</p>
-        <h2 class="section__title">Стоимость <span class="section__title-script">услуг</span></h2>
-
-        <div class="pricing__grid">
-
-          <div class="pricing-card reveal" data-tier-icon="✦">
-            <div class="pricing-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <h3 class="pricing-card__name">Базовый</h3>
-            <p class="pricing-card__desc">Классический маникюр, покрытие гель-лаком — один тон. Подходит для регулярного ухода.</p>
-            <div class="pricing-card__price">
-              <span class="pricing-card__amount"><span class="pricing-card__currency">от </span>2&thinsp;200</span>
-              <span class="pricing-card__duration">₽ / процедура</span>
-            </div>
-            <ul class="pricing-card__features">
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Маникюр (форма + кутикула)
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Покрытие гель-лак (1 цвет)
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Стерильные инструменты
-              </li>
-              <li class="pricing-card__feature pricing-card__feature--disabled">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                Дизайн
-              </li>
-            </ul>
-            <div class="pricing-card__cta">
-              <a href="#booking" class="btn btn--outline" style="width:100%;justify-content:center;">Записаться</a>
+            <div class="offers-banner__divider"></div>
+            <div class="offers-banner__item">
+              <span class="offers-banner__tag">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+                Новым клиентам
+              </span>
+              <p class="offers-banner__text">Первое посещение — скидка <strong>−15%</strong> на любую услугу</p>
             </div>
           </div>
-
-          <div class="pricing-card pricing-card--hit reveal" data-tier-icon="✦✦">
-            <span class="pricing-card__badge">Популярный</span>
-            <div class="pricing-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            </div>
-            <h3 class="pricing-card__name">Дизайн</h3>
-            <p class="pricing-card__desc">Маникюр + авторский дизайн. Для тех, кто хочет уникальный результат под своё настроение.</p>
-            <div class="pricing-card__price">
-              <span class="pricing-card__amount"><span class="pricing-card__currency">от </span>3&thinsp;500</span>
-              <span class="pricing-card__duration">₽ / процедура</span>
-            </div>
-            <ul class="pricing-card__features">
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Маникюр полный
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Авторский дизайн (до 5 ногтей)
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Покрытие гель-лак
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Подбор дизайна + консультация
-              </li>
-            </ul>
-            <div class="pricing-card__cta">
-              <a href="#booking" class="btn btn--primary" style="width:100%;justify-content:center;">Записаться</a>
-            </div>
-          </div>
-
-          <div class="pricing-card reveal" data-tier-icon="✦✦✦">
-            <div class="pricing-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            </div>
-            <h3 class="pricing-card__name">Полный SPA</h3>
-            <p class="pricing-card__desc">Комплексный уход: маникюр + педикюр + дизайн + SPA-процедуры. Полное погружение.</p>
-            <div class="pricing-card__price">
-              <span class="pricing-card__amount"><span class="pricing-card__currency">от </span>6&thinsp;200</span>
-              <span class="pricing-card__duration">₽ / процедура</span>
-            </div>
-            <ul class="pricing-card__features">
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Маникюр + педикюр
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Авторский дизайн
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                SPA-процедуры (парафин + маска)
-              </li>
-              <li class="pricing-card__feature">
-                <svg class="pricing-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Чай + приоритетная запись
-              </li>
-            </ul>
-            <div class="pricing-card__cta">
-              <a href="#booking" class="btn btn--outline" style="width:100%;justify-content:center;">Записаться</a>
-            </div>
-          </div>
-
         </div>
-        
-      </div>
-    </section>
 
+        <div class="services__grid">
 
-    <!-- ============================================================
-         OFFERS
-         ============================================================ -->
-    <section class="section offers" id="offers" data-section="offers">
-      <div class="container">
-        <p class="section__label">Акции</p>
-        <h2 class="section__title">Специальные предложения</h2>
-
-        <div class="offers__grid">
-
-          <article class="offer-card reveal" data-offer>
-            <span class="offer-card__tag">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-              Ограниченное предложение
-            </span>
-            <h3 class="offer-card__title">Маникюр + дизайн за <strong class="offer-card__price-accent">2 900 ₽</strong></h3>
-            <p class="offer-card__desc">Маникюр + авторский дизайн до 5 ногтей. Стерильные инструменты, покрытие гель-лаком на выбор. Только при записи через сайт.</p>
-
-            <div class="offer-card__timer" role="timer" aria-label="Осталось времени до конца акции" data-timer data-deadline="2026-07-31T23:59:59">
-              <span class="offer-card__timer-label">Осталось</span>
-              <div class="timer-unit">
-                <span class="timer-unit__value" data-timer-days>00</span>
-                <span class="timer-unit__label">дн</span>
-              </div>
-              <span class="timer-sep" aria-hidden="true">:</span>
-              <div class="timer-unit">
-                <span class="timer-unit__value" data-timer-hours>00</span>
-                <span class="timer-unit__label">ч</span>
-              </div>
-              <span class="timer-sep" aria-hidden="true">:</span>
-              <div class="timer-unit">
-                <span class="timer-unit__value" data-timer-minutes>00</span>
-                <span class="timer-unit__label">мин</span>
-              </div>
-              <span class="timer-sep" aria-hidden="true">:</span>
-              <div class="timer-unit">
-                <span class="timer-unit__value" data-timer-seconds>00</span>
-                <span class="timer-unit__label">сек</span>
-              </div>
+          <!-- Wide featured card -->
+          <article class="service-card service-card--featured reveal" data-service-name="Маникюр">
+            <span class="service-card__badge">Хит</span>
+            <div class="service-card__image-wrap">
+              <img src="images/services/service-manicure.jpg" alt="Маникюр" class="service-card__img" loading="lazy">
             </div>
-
-            <div class="offer-card__footer">
-              <span class="offer-card__original">3 900 ₽</span>
-              <span class="offer-card__new">2 900 ₽</span>
-              <a href="#booking" class="btn btn--primary">Записаться</a>
-            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Маникюр</h3>
+              <p class="service-card__desc">Комбинированный и аппаратный маникюр с подготовкой под покрытие или без.
+                Медицинская стерилизация.</p>
+              <div class="service-card__footer">
+                <div class="service-card__price">от <span>2 200 ₽</span></div>
+                <a href="#booking" class="service-card__cta" aria-label="Записаться на маникюр">
+                  Записаться
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </a>
+              </div>
           </article>
 
-          <article class="offer-card reveal" data-offer>
-            <span class="offer-card__tag">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              Для новых клиентов
-            </span>
-            <h3 class="offer-card__title">Первое посещение — скидка <strong class="offer-card__price-accent">−15%</strong></h3>
-            <p class="offer-card__desc">Для новых клиентов. Скидка 15% на любую услугу при первом посещении. Просто скажите, что пришли по акции с сайта.</p>
-
-            <div class="offer-card__timer" role="timer" aria-label="Осталось времени" data-timer data-deadline="2026-08-15T23:59:59">
-              <span class="offer-card__timer-label">Осталось</span>
-              <div class="timer-unit"><span class="timer-unit__value" data-timer-days>00</span><span class="timer-unit__label">дн</span></div>
-              <span class="timer-sep" aria-hidden="true">:</span>
-              <div class="timer-unit"><span class="timer-unit__value" data-timer-hours>00</span><span class="timer-unit__label">ч</span></div>
-              <span class="timer-sep" aria-hidden="true">:</span>
-              <div class="timer-unit"><span class="timer-unit__value" data-timer-minutes>00</span><span class="timer-unit__label">мин</span></div>
-              <span class="timer-sep" aria-hidden="true">:</span>
-              <div class="timer-unit"><span class="timer-unit__value" data-timer-seconds>00</span><span class="timer-unit__label">сек</span></div>
+          <article class="service-card reveal" data-service-name="Педикюр">
+            <div class="service-card__image-wrap">
+              <img src="images/services/service-pedicure.jpg" alt="Педикюр" class="service-card__img" loading="lazy">
             </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Педикюр</h3>
+              <p class="service-card__desc">Аппаратный педикюр + SPA-уход. Покрытие гель-лаком в стоимость.</p>
+              <div class="service-card__footer">
+                <div class="service-card__price">от <span>2 800 ₽</span></div>
+                <a href="#booking" class="service-card__cta" aria-label="Записаться на педикюр">Записаться<svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg></a>
+              </div>
+          </article>
 
-            <div class="offer-card__footer">
-              <span class="offer-card__original">2 200 ₽</span>
-              <span class="offer-card__new">1 870 ₽</span>
-              <a href="#booking" class="btn btn--primary">Записаться</a>
+          <article class="service-card reveal" data-service-name="Гель-лак">
+            <div class="service-card__image-wrap">
+              <img src="images/services/service-gel.jpg" alt="Гель-лак" class="service-card__img" loading="lazy">
             </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Гель-лак</h3>
+              <p class="service-card__desc">OPI, CND, Gelish. Держится 3+ недели без сколов и отслоений.</p>
+              <div class="service-card__footer">
+                <div class="service-card__price">от <span>1 200 ₽</span></div>
+                <a href="#booking" class="service-card__cta" aria-label="Записаться на гель-лак">Записаться<svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg></a>
+              </div>
+          </article>
+
+          <article class="service-card reveal" data-service-name="Авторский дизайн">
+            <div class="service-card__image-wrap">
+              <img src="images/services/service-design.jpg" alt="Авторский дизайн" class="service-card__img"
+                loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Авторский дизайн</h3>
+              <p class="service-card__desc">Nail-art любой сложности: акварель, объём, кристаллы, фольга. Индивидуальный
+                эскиз по вашей идее.</p>
+              <div class="service-card__footer">
+                <div class="service-card__price">от <span>800 ₽</span></div>
+                <a href="#configurator" class="service-card__cta" aria-label="Подобрать дизайн">Подобрать дизайн<svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg></a>
+              </div>
+          </article>
+
+          <article class="service-card reveal" data-service-name="Наращивание">
+            <div class="service-card__image-wrap">
+              <img src="images/services/service-extension.jpg" alt="Наращивание" class="service-card__img"
+                loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Наращивание</h3>
+              <p class="service-card__desc">Акрил, полигель, биогель, Gel-X. Любая длина, форма и дизайн.</p>
+              <div class="service-card__footer">
+                <div class="service-card__price">от <span>4 500 ₽</span></div>
+                <a href="#booking" class="service-card__cta" aria-label="Записаться на наращивание">Записаться<svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg></a>
+              </div>
+          </article>
+
+          <article class="service-card reveal" data-service-name="Полный SPA">
+            <div class="service-card__image-wrap">
+              <img src="images/services/service-care.jpg" alt="Полный SPA" class="service-card__img" loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Полный SPA</h3>
+              <p class="service-card__desc">Маникюр + педикюр + дизайн + парафин + маска. Полное погружение в уход.</p>
+              <div class="service-card__footer">
+                <div class="service-card__price">от <span>6 200 ₽</span></div>
+                <a href="#booking" class="service-card__cta" aria-label="Записаться на SPA">Записаться<svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg></a>
+              </div>
           </article>
 
         </div>
-        
+
       </div>
     </section>
 
@@ -975,180 +1109,591 @@
          ============================================================ -->
     <section class="section loyalty" id="loyalty" data-section="loyalty">
       <div class="container">
-        <p class="section__label">Лояльность</p>
-        <h2 class="section__title">Программа <span class="section__title-script">лояльности</span></h2>
+        <p class="section__label reveal-label">Лояльность</p>
+        <h2 class="section__title reveal-title">Программа <span class="section__title-script">лояльности</span></h2>
 
         <div class="loyalty__layout">
 
-          <div class="loyalty__info">
-            <div class="loyalty__steps" aria-label="Как работает программа">
-              <div class="loyalty__step">
-                <div class="loyalty__step-number" aria-hidden="true">01</div>
-                <div class="loyalty__step-body">
-                  <h3 class="loyalty__step-title">Запись и посещение</h3>
-                  <p class="loyalty__step-text">При каждом посещении студии вы накапливаете бонусные баллы — автоматически.</p>
-                </div>
-              </div>
-              <div class="loyalty__step">
-                <div class="loyalty__step-number" aria-hidden="true">02</div>
-                <div class="loyalty__step-body">
-                  <h3 class="loyalty__step-title">Накапливайте баллы</h3>
-                  <p class="loyalty__step-text">1 ₽ = 1 балл. Баллы не сгорают и переносятся на следующий месяц.</p>
-                </div>
-              </div>
-              <div class="loyalty__step">
-                <div class="loyalty__step-number" aria-hidden="true">03</div>
-                <div class="loyalty__step-body">
-                  <h3 class="loyalty__step-title">Повышайте уровень</h3>
-                  <p class="loyalty__step-text">Каждый новый уровень открывает приоритетную запись, бонусы и скидки.</p>
-                </div>
-              </div>
-            </div>
-            <a href="#booking" class="btn btn--primary">Начать копить баллы</a>
+          <div class="loyalty__intro reveal" style="text-align: left; margin-bottom: var(--sp-6);">
+            <h3
+              style="font-family: var(--font-display); font-size: var(--fs-xl); color: var(--color-ink); margin-bottom: var(--sp-2);">
+              Эксклюзивный клуб <span class="text-violet">Neva Nail</span></h3>
+            <p style="color: var(--color-ink-secondary); max-width: 600px; line-height: var(--lh-relaxed);">Мы ценим
+              каждого клиента. Получайте кэшбек, приоритетную запись и подарки с каждым визитом.</p>
           </div>
 
-          <div class="loyalty__levels">
+          <div class="loyalty__certificates" aria-label="Сертификаты уровней лояльности">
 
-            <div class="loyalty-level loyalty-level--active">
-              <div class="loyalty-level__header">
-                <svg class="loyalty-level__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <h3 class="loyalty-level__name">Серебряный</h3>
-                <span class="loyalty-level__cashback">+3% кешбэк</span>
-              </div>
-              <div class="loyalty-level__bar-wrap">
-                <div class="loyalty-level__bar-label">
-                  <span>0 баллов</span>
-                  <span>500 баллов</span>
+            <!-- Certificate 1: Bronze -->
+            <div class="certificate certificate--bronze reveal is-open" data-accordion>
+              <div class="cert__inner">
+                <!-- Corners -->
+                <svg class="cert__corner cert__corner--tl" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--tr" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--bl" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--br" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+
+                <div class="cert__header certificate__header">
+                  <div class="cert__header-top">
+                    <h4 class="cert__title" style="font-size: clamp(1.4rem, 4vw, 2rem);">КЛУБНАЯ КАРТА</h4>
+                    <p class="cert__subtitle">бронзовая</p>
+                    <div class="cert__title-divider"></div>
+                    <p class="cert__desc">Бронзовый статус постоянного клиента</p>
+                    <p class="cert__highlight">Постоянная скидка 3%</p>
+                  </div>
+
+                  <div class="cert__seal-row">
+                    <div class="cert__line"></div>
+                    <div class="cert__seal-wrapper">
+                      <button class="cert__seal certificate__toggle" aria-label="Подробнее">
+                        <svg class="cert__seal-bg" viewBox="0 0 100 100">
+                          <polygon
+                            points="50,5 60,15 75,15 75,30 85,40 75,50 85,60 75,70 75,85 60,85 50,95 40,85 25,85 25,70 15,60 25,50 15,40 25,30 25,15 40,15"
+                            fill="currentColor" stroke="var(--cert-bg)" stroke-width="2" />
+                          <circle cx="50" cy="50" r="28" fill="none" stroke="var(--cert-bg)" stroke-width="1.5"
+                            stroke-dasharray="3 3" />
+                        </svg>
+                        <span class="cert__seal-text">BRONZE</span>
+                      </button>
+                    </div>
+                    <div class="cert__line"></div>
+                  </div>
+                  <p class="cert__hint">Нажмите, чтобы развернуть</p>
                 </div>
-                <div class="loyalty-level__bar">
-                  <div class="loyalty-level__bar-fill" style="--bar-width: 35%;" data-bar-fill="35"></div>
+
+                <div class="certificate__body">
+                  <div class="cert__perks-wrapper">
+                    <ul class="certificate__perks cert__perks">
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Выдается после 1 посещения</li>
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Скидка 3% на все услуги</li>
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Дизайн 2-х ногтей в подарок</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: var(--sp-4);">
+                      <a href="#booking" class="btn btn--primary"
+                        style="padding: 0.6rem 1.5rem; font-size: 0.9rem; width: 100%;">Вступить в клуб</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="loyalty-level__perks">
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Приоритетная запись</span>
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Бонус в день рождения −10%</span>
               </div>
             </div>
 
-            <div class="loyalty-level loyalty-level--gold">
-              <div class="loyalty-level__header">
-                <svg class="loyalty-level__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/><path d="M12 2v4"/></svg>
-                <h3 class="loyalty-level__name">Золотой</h3>
-                <span class="loyalty-level__cashback">+7% кешбэк</span>
-              </div>
-              <div class="loyalty-level__bar-wrap">
-                <div class="loyalty-level__bar-label">
-                  <span>500 баллов</span>
-                  <span>2 000 баллов</span>
+            <!-- Certificate 2: Silver -->
+            <div class="certificate certificate--silver reveal" data-accordion>
+              <div class="cert__inner">
+                <!-- Corners -->
+                <svg class="cert__corner cert__corner--tl" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--tr" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--bl" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--br" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+
+                <div class="cert__header certificate__header">
+                  <div class="cert__header-top">
+                    <h4 class="cert__title" style="font-size: clamp(1.4rem, 4vw, 2rem);">КЛУБНАЯ КАРТА</h4>
+                    <p class="cert__subtitle">серебряная</p>
+                    <div class="cert__title-divider"></div>
+                    <p class="cert__desc">Серебряный статус особого клиента</p>
+                    <p class="cert__highlight">Постоянная скидка 5%</p>
+                  </div>
+
+                  <div class="cert__seal-row">
+                    <div class="cert__line"></div>
+                    <div class="cert__seal-wrapper">
+                      <button class="cert__seal certificate__toggle" aria-label="Подробнее">
+                        <svg class="cert__seal-bg" viewBox="0 0 100 100">
+                          <polygon
+                            points="50,5 60,15 75,15 75,30 85,40 75,50 85,60 75,70 75,85 60,85 50,95 40,85 25,85 25,70 15,60 25,50 15,40 25,30 25,15 40,15"
+                            fill="currentColor" stroke="var(--cert-bg)" stroke-width="2" />
+                          <circle cx="50" cy="50" r="28" fill="none" stroke="var(--cert-bg)" stroke-width="1.5"
+                            stroke-dasharray="3 3" />
+                        </svg>
+                        <span class="cert__seal-text">SILVER</span>
+                      </button>
+                    </div>
+                    <div class="cert__line"></div>
+                  </div>
+                  <p class="cert__hint">Нажмите, чтобы развернуть</p>
                 </div>
-                <div class="loyalty-level__bar">
-                  <div class="loyalty-level__bar-fill" style="--bar-width: 0%;" data-bar-fill="0"></div>
+
+                <div class="certificate__body">
+                  <div class="cert__perks-wrapper">
+                    <ul class="certificate__perks cert__perks">
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Выдается после 5 посещений</li>
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Скидка 5% на все услуги</li>
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Бесплатный уход за кутикулой</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: var(--sp-4);">
+                      <a href="#booking" class="btn btn--primary"
+                        style="padding: 0.6rem 1.5rem; font-size: 0.9rem; width: 100%;">Вступить в клуб</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="loyalty-level__perks">
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Все привилегии Серебряного</span>
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Персональные предложения</span>
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Бесплатный уход за кутикулой</span>
               </div>
             </div>
 
-            <div class="loyalty-level loyalty-level--platinum">
-              <div class="loyalty-level__header">
-                <svg class="loyalty-level__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 12v4h14v-4"/></svg>
-                <h3 class="loyalty-level__name">Платиновый</h3>
-                <span class="loyalty-level__cashback">+12% кешбэк</span>
-              </div>
-              <div class="loyalty-level__bar-wrap">
-                <div class="loyalty-level__bar-label">
-                  <span>2 000 баллов</span>
-                  <span>5 000+ баллов</span>
+            <!-- Certificate 3: Gold -->
+            <div class="certificate certificate--gold reveal" data-accordion>
+              <div class="cert__inner">
+                <!-- Corners -->
+                <svg class="cert__corner cert__corner--tl" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--tr" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--bl" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+                <svg class="cert__corner cert__corner--br" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5,25 L5,5 L25,5" />
+                  <path d="M15,35 L15,15 L35,15" />
+                  <path d="M15,45 C25,45 25,25 45,25" />
+                  <circle cx="45" cy="25" r="2" fill="currentColor" />
+                  <path d="M45,15 C45,25 25,25 25,45" />
+                  <circle cx="25" cy="45" r="2" fill="currentColor" />
+                </svg>
+
+                <div class="cert__header certificate__header">
+                  <div class="cert__header-top">
+                    <h4 class="cert__title" style="font-size: clamp(1.4rem, 4vw, 2rem);">КЛУБНАЯ КАРТА</h4>
+                    <p class="cert__subtitle">золотая</p>
+                    <div class="cert__title-divider"></div>
+                    <p class="cert__desc">Золотой статус VIP клиента</p>
+                    <p class="cert__highlight">Постоянная скидка 10%</p>
+                  </div>
+
+                  <div class="cert__seal-row">
+                    <div class="cert__line"></div>
+                    <div class="cert__seal-wrapper">
+                      <button class="cert__seal certificate__toggle" aria-label="Подробнее">
+                        <svg class="cert__seal-bg" viewBox="0 0 100 100">
+                          <polygon
+                            points="50,5 60,15 75,15 75,30 85,40 75,50 85,60 75,70 75,85 60,85 50,95 40,85 25,85 25,70 15,60 25,50 15,40 25,30 25,15 40,15"
+                            fill="currentColor" stroke="var(--cert-bg)" stroke-width="2" />
+                          <circle cx="50" cy="50" r="28" fill="none" stroke="var(--cert-bg)" stroke-width="1.5"
+                            stroke-dasharray="3 3" />
+                        </svg>
+                        <span class="cert__seal-text">GOLD</span>
+                      </button>
+                    </div>
+                    <div class="cert__line"></div>
+                  </div>
+                  <p class="cert__hint">Нажмите, чтобы развернуть</p>
                 </div>
-                <div class="loyalty-level__bar">
-                  <div class="loyalty-level__bar-fill" style="--bar-width: 0%;" data-bar-fill="0"></div>
+
+                <div class="certificate__body">
+                  <div class="cert__perks-wrapper">
+                    <ul class="certificate__perks cert__perks">
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Выдается после 10 посещений</li>
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Скидка 10% на все услуги</li>
+                      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>Постоянная скидка на SPA 20%</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: var(--sp-4);">
+                      <a href="#booking" class="btn btn--primary"
+                        style="padding: 0.6rem 1.5rem; font-size: 0.9rem; width: 100%;">Вступить в клуб</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="loyalty-level__perks">
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Все привилегии Gold + VIP-запись</span>
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Персональный мастер</span>
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Комплиментарные процедуры</span>
-                <span class="loyalty-level__perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Персональный консьерж-сервис</span>
               </div>
             </div>
 
           </div>
+
         </div>
-        
+
       </div>
     </section>
 
 
     <!-- ============================================================
-         [10] REVIEWS
+         REVIEWS — infinite auto-scroll carousel
          ============================================================ -->
-    <section class="section reviews" id="reviews" data-section="reviews">
+    <section class="section section--raised reviews" id="reviews" data-section="reviews">
       <div class="container" style="padding-inline:0; max-width:none;">
-        <div style="padding-inline:var(--container-pad); max-width:var(--container-width); margin-inline:auto; margin-bottom:var(--sp-8);">
-          <p class="section__label">Отзывы</p>
-          <h2 class="section__title">Что говорят <span class="section__title-script">клиенты</span></h2>
+        <div
+          style="padding-inline:var(--container-pad); max-width:var(--container-width); margin-inline:auto; margin-bottom:var(--sp-8);">
+          <p class="section__label reveal-label">Отзывы</p>
+          <h2 class="section__title reveal-title">Что говорят <span class="section__title-script">клиенты</span></h2>
         </div>
       </div>
 
-      <!-- Centered carousel with prev/next and dots -->
+      <!-- Infinite auto-scroll carousel (no stops) -->
       <div class="reviews__carousel" data-reviews-carousel>
 
         <button class="reviews__nav reviews__nav--prev" aria-label="Предыдущий отзыв" data-reviews-prev>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
         </button>
 
         <div class="reviews__viewport" data-reviews-viewport>
           <div class="reviews__track" role="list" data-reviews-track>
 
             <article class="review-card" role="listitem">
-              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-              <p class="review-card__text">Давно ищу хорошего мастера маникюра в Петербурге. Нашла! Анна делает идеальную форму, покрытие держится больше трёх недель. Студия стерильная, всё как в хорошей клинике.</p>
-              <div class="review-card__footer"><div class="review-card__avatar" aria-hidden="true">А</div><div class="review-card__meta"><p class="review-card__name">Анастасия К.</p><p class="review-card__source">Google</p></div></div>
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Давно ищу хорошего мастера маникюра в Петербурге. Нашла! Анна делает
+                идеальную форму, покрытие держится больше трёх недель. Студия стерильная, всё как в хорошей клинике.</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">А</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Анастасия К.</p>
+                  <p class="review-card__source">Google</p>
+                </div>
+              </div>
             </article>
 
             <article class="review-card" role="listitem">
-              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-              <p class="review-card__text">Записалась впервые на авторский дизайн к Екатерине — ни разу не пожалела. Акварельные цветы получились как на картинке. Атмосфера очень уютная, принесли чай прямо в начале.</p>
-              <div class="review-card__footer"><div class="review-card__avatar" aria-hidden="true">М</div><div class="review-card__meta"><p class="review-card__name">Мария Л.</p><p class="review-card__source">Instagram</p></div></div>
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Записалась впервые на авторский дизайн к Екатерине — ни разу не пожалела.
+                Акварельные цветы получились как на картинке. Атмосфера очень уютная, принесли чай прямо в начале.</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">М</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Мария Л.</p>
+                  <p class="review-card__source">Instagram</p>
+                </div>
+              </div>
             </article>
 
             <article class="review-card" role="listitem">
-              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-              <p class="review-card__text">Пришла на педикюр перед отпуском, ушла с ощущением настоящего SPA. Мария профессиональна и внимательна к деталям. Стопы как новые!</p>
-              <div class="review-card__footer"><div class="review-card__avatar" aria-hidden="true">Н</div><div class="review-card__meta"><p class="review-card__name">Надежда С.</p><p class="review-card__source">2ГИС</p></div></div>
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Пришла на педикюр перед отпуском, ушла с ощущением настоящего SPA. Мария
+                профессиональна и внимательна к деталям. Стопы как новые!</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">Н</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Надежда С.</p>
+                  <p class="review-card__source">2ГИС</p>
+                </div>
+              </div>
             </article>
 
             <article class="review-card" role="listitem">
-              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-              <p class="review-card__text">Записалась по рекомендации подруги. Студия соответствует всем ожиданиям — premium во всём, от инструментов до кофе. Цены абсолютно оправданы.</p>
-              <div class="review-card__footer"><div class="review-card__avatar" aria-hidden="true">И</div><div class="review-card__meta"><p class="review-card__name">Ирина В.</p><p class="review-card__source">Google</p></div></div>
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Записалась по рекомендации подруги. Студия соответствует всем ожиданиям —
+                premium во всём, от инструментов до кофе. Цены абсолютно оправданы.</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">И</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Ирина В.</p>
+                  <p class="review-card__source">Google</p>
+                </div>
+              </div>
             </article>
 
             <article class="review-card" role="listitem">
-              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-              <p class="review-card__text">Делаю наращивание у Юли уже полгода. Форма держится идеально, никаких отслоений. Всегда предложит что-то новое под моё настроение. Рекомендую!</p>
-              <div class="review-card__footer"><div class="review-card__avatar" aria-hidden="true">О</div><div class="review-card__meta"><p class="review-card__name">Ольга Д.</p><p class="review-card__source">Яндекс</p></div></div>
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Делаю наращивание у Юли уже полгода. Форма держится идеально, никаких
+                отслоений. Всегда предложит что-то новое под моё настроение. Рекомендую!</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">О</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Ольга Д.</p>
+                  <p class="review-card__source">Яндекс</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Никогда не думала, что буду так ждать похода к мастеру! Студия уютная,
+                мастера внимательные, кофе вкусный. А ногти — просто мечта. Уже советую всем подругам.</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">Е</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Елена К.</p>
+                  <p class="review-card__source">Instagram</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Взяла полный SPA-комплекс на день рождения. Три часа удовольствия! Мастер
+                Анна — просто золотые руки. Дизайн сделала точно по моему референсу. Буду постоянным клиентом.</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">В</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Валерия Т.</p>
+                  <p class="review-card__source">Google</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="review-card__stars" aria-label="5 из 5 звёзд"><svg class="review-card__star"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><svg class="review-card__star" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <p class="review-card__text">Chrome-дизайн от Екатерины — это что-то невероятное. Все знакомые спрашивают
+                где делала. Инструменты стерильные, подтвердила лично. Теперь только сюда!</p>
+              <div class="review-card__footer">
+                <div class="review-card__avatar" aria-hidden="true">С</div>
+                <div class="review-card__meta">
+                  <p class="review-card__name">Светлана М.</p>
+                  <p class="review-card__source">Яндекс</p>
+                </div>
+              </div>
             </article>
 
           </div>
         </div>
 
         <button class="reviews__nav reviews__nav--next" aria-label="Следующий отзыв" data-reviews-next>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </button>
 
       </div>
 
       <!-- Dots indicator -->
       <div class="reviews__dots" role="tablist" aria-label="Навигация по отзывам" data-reviews-dots>
-        <button class="reviews__dot is-active" role="tab" aria-selected="true" aria-label="Отзыв 1" data-dot="0"></button>
+        <button class="reviews__dot is-active" role="tab" aria-selected="true" aria-label="Отзыв 1"
+          data-dot="0"></button>
         <button class="reviews__dot" role="tab" aria-selected="false" aria-label="Отзыв 2" data-dot="1"></button>
         <button class="reviews__dot" role="tab" aria-selected="false" aria-label="Отзыв 3" data-dot="2"></button>
         <button class="reviews__dot" role="tab" aria-selected="false" aria-label="Отзыв 4" data-dot="3"></button>
         <button class="reviews__dot" role="tab" aria-selected="false" aria-label="Отзыв 5" data-dot="4"></button>
+        <button class="reviews__dot" role="tab" aria-selected="false" aria-label="Отзыв 6" data-dot="5"></button>
+        <button class="reviews__dot" role="tab" aria-selected="false" aria-label="Отзыв 7" data-dot="6"></button>
+        <button class="reviews__dot" role="tab" aria-selected="false" aria-label="Отзыв 8" data-dot="7"></button>
       </div>
 
 
@@ -1156,95 +1701,80 @@
 
 
     <!-- ============================================================
-         [11] BOOKING
+         BOOKING
          ============================================================ -->
     <section class="section booking" id="booking" data-section="booking">
       <div class="container">
-        <p class="section__label">Запись</p>
-        <h2 class="section__title">Записаться <span class="section__title-script">онлайн</span></h2>
-
         <div class="booking__layout">
 
-          <!-- Info -->
+          <!-- Left: info side -->
           <div class="booking__info">
-            <div class="booking__feature">
-              <div class="booking__feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            <p class="section__label reveal-label">Запись</p>
+            <h2 class="section__title reveal-title">Записаться <span class="section__title-script">онлайн</span></h2>
+            <p class="booking__info-text reveal">Заполните форму — мы свяжемся с вами в течение 15 минут для
+              подтверждения записи.</p>
+
+            <div class="booking__features">
+              <div class="booking__feature reveal">
+                <div class="booking__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="booking__feature-label">Подтверждение за 15 мин</p>
+                  <p class="booking__feature-value">Позвоним или напишем</p>
+                </div>
               </div>
-              <div class="booking__feature-body">
-                <h3 class="booking__feature-title">Стерильность</h3>
-                <p class="booking__feature-text">Все инструменты проходят медицинскую стерилизацию. Автоклавирование после каждого клиента.</p>
+              <div class="booking__feature reveal">
+                <div class="booking__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="booking__feature-label">Запись онлайн 24/7</p>
+                  <p class="booking__feature-value">В удобное для вас время</p>
+                </div>
+              </div>
+              <div class="booking__feature reveal">
+                <div class="booking__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="booking__feature-label">Медицинская стерилизация</p>
+                  <p class="booking__feature-value">Безопасность гарантирована</p>
+                </div>
               </div>
             </div>
-            <div class="booking__feature">
-              <div class="booking__feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div class="booking__feature-body">
-                <h3 class="booking__feature-title">Точность по времени</h3>
-                <p class="booking__feature-text">Ценим ваше время. Мастер всегда готов к назначенному часу — без ожидания в очереди.</p>
-              </div>
-            </div>
-            <div class="booking__feature">
-              <div class="booking__feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
-              </div>
-              <div class="booking__feature-body">
-                <h3 class="booking__feature-title">Подтверждение за 15 мин</h3>
-                <p class="booking__feature-text">Получите подтверждение записи по SMS или мессенджеру в течение 15 минут.</p>
-              </div>
-            </div>
-            <div class="booking__feature">
-              <div class="booking__feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              </div>
-              <div class="booking__feature-body">
-                <h3 class="booking__feature-title">Бесплатная отмена</h3>
-                <p class="booking__feature-text">Перенос или отмена записи - без штрафов при уведомлении за 2 часа.</p>
-              </div>
+
+            <!-- Design choice from configurator -->
+            <div class="booking__design-choice" id="booking-design-choice">
+              <p class="booking__design-choice-label">Выбранный дизайн из конфигуратора:</p>
+              <p class="booking__design-choice-value" data-design-choice-text></p>
+              <button class="btn btn--ghost" data-clear-design style="font-size:0.75rem;margin-top:0.5rem;">×
+                Сбросить</button>
             </div>
           </div>
 
-          <!-- Form -->
-          <div class="booking__form-wrap">
-            <!-- Wraps everything that hides after successful submit -->
-            <div data-booking-form-inner>
-            <p class="booking__form-label text-mono">ОНЛАЙН-ЗАПИСЬ</p>
-            <h3 class="booking__form-title">Выберите время</h3>
-
-            <!-- Design choice carried from configurator -->
-            <div class="booking__design-choice" id="booking-design-choice" aria-live="polite">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              Дизайн: <span data-design-choice-text>—</span>
-              <button class="booking__design-clear" aria-label="Убрать выбранный дизайн" data-clear-design>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-              </button>
-            </div>
-
-            <!-- Step indicators -->
-            <div class="booking__steps" aria-hidden="true">
-              <div class="booking__step booking__step--active">
-                <span class="booking__step-num">01</span>
-                <span class="booking__step-label">Услуга</span>
-              </div>
-              <div class="booking__step-line"></div>
-              <div class="booking__step">
-                <span class="booking__step-num">02</span>
-                <span class="booking__step-label">Дата и время</span>
-              </div>
-              <div class="booking__step-line"></div>
-              <div class="booking__step">
-                <span class="booking__step-num">03</span>
-                <span class="booking__step-label">Контакты</span>
-              </div>
-            </div>
-
+          <!-- Right: form -->
+          <div class="booking__compact" data-booking-form-inner>
             <form class="booking__form" id="booking-form" novalidate data-booking-form aria-label="Форма онлайн-записи">
 
               <div class="booking__form-row">
                 <div class="form__group" data-form-group>
                   <label class="form__label" for="service">Услуга</label>
-                  <select class="form__select" id="service" name="service" required aria-required="true" data-form-field>
+                  <select class="form__select" id="service" name="service" required aria-required="true"
+                    data-form-field>
                     <option value="" disabled selected>Выберите услугу</option>
                     <option value="manicure">Маникюр</option>
                     <option value="pedicure">Педикюр</option>
@@ -1271,7 +1801,8 @@
               <div class="booking__form-row">
                 <div class="form__group" data-form-group>
                   <label class="form__label" for="date">Дата</label>
-                  <input class="form__input" type="date" id="date" name="date" required aria-required="true" data-form-field>
+                  <input class="form__input" type="date" id="date" name="date" required aria-required="true"
+                    data-form-field>
                   <span class="form__error" role="alert">Выберите дату</span>
                 </div>
                 <div class="form__group" data-form-group>
@@ -1296,136 +1827,65 @@
               <div class="booking__form-row">
                 <div class="form__group" data-form-group>
                   <label class="form__label" for="name">Имя</label>
-                  <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" required aria-required="true" autocomplete="given-name" data-form-field data-validate="name">
+                  <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" required
+                    aria-required="true" autocomplete="given-name" data-form-field data-validate="name">
                   <span class="form__error" role="alert">Введите ваше имя</span>
                 </div>
                 <div class="form__group" data-form-group>
                   <label class="form__label" for="phone">Телефон</label>
-                  <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required aria-required="true" autocomplete="tel" data-form-field data-validate="phone">
+                  <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__"
+                    required aria-required="true" autocomplete="tel" data-form-field data-validate="phone">
                   <span class="form__error" role="alert">Введите корректный номер телефона</span>
                 </div>
               </div>
 
               <div class="form__group" data-form-group>
                 <label class="form__label" for="comment">Пожелания (необязательно)</label>
-                <textarea class="form__textarea" id="comment" name="comment" placeholder="Особые пожелания к мастеру, референс дизайна..." data-form-field></textarea>
+                <textarea class="form__textarea" id="comment" name="comment"
+                  placeholder="Дизайн, цвет, особые пожелания..." data-form-field></textarea>
               </div>
 
-              <!-- Honeypot (spam protection) -->
+              <!-- Honeypot -->
               <div class="booking__honeypot" aria-hidden="true">
                 <input type="text" name="website" tabindex="-1" autocomplete="off">
               </div>
 
               <div class="booking__submit-area">
-                <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding-block:1rem;" aria-describedby="booking-note">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <button type="submit" class="btn btn--primary"
+                  style="width:100%;justify-content:center;padding-block:1rem;" aria-describedby="booking-note">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                  </svg>
                   Записаться
                 </button>
-                <p class="booking__submit-note" id="booking-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>. Мы не передаём данные третьим лицам.</p>
+                <p class="booking__submit-note" id="booking-note">Нажимая кнопку, вы соглашаетесь с <a
+                    href="#">политикой конфиденциальности</a>.</p>
               </div>
 
             </form>
-            </div><!-- /data-booking-form-inner -->
+          </div><!-- /data-booking-form-inner -->
 
-            <!-- Success state -->
-            <div class="booking__success" id="booking-success" aria-live="polite" aria-atomic="true">
-              <div class="booking__success-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <h3 class="booking__success-title">Запись принята!</h3>
-              <p class="booking__success-text">Мы свяжемся с вами в течение 15 минут для подтверждения. Проверьте телефон.</p>
-              <a href="#services" class="btn btn--outline">Вернуться к услугам</a>
+          <!-- Success state -->
+          <div class="booking__success" id="booking-success" aria-live="polite" aria-atomic="true">
+            <div class="booking__success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
             </div>
-
+            <h3 class="booking__success-title">Запись принята!</h3>
+            <p class="booking__success-text">Мы свяжемся с вами в течение 15 минут для подтверждения.</p>
+            <a href="#services" class="btn btn--outline">Вернуться к услугам</a>
           </div>
+
         </div>
-        
+
       </div>
     </section>
-
-
-    <!-- ============================================================
-         [12] FAQ
-         ============================================================ -->
-    <section class="section faq" id="faq" data-section="faq">
-      <div class="container">
-        <p class="section__label">Вопросы</p>
-        <h2 class="section__title">Часто задают</h2>
-
-        <div class="faq__layout">
-          <div class="faq__intro">
-            <p class="faq__intro-text">Отвечаем на самые популярные вопросы. Не нашли ответ - напишите нам.</p>
-            <a href="#booking" class="btn btn--primary">Задать вопрос</a>
-          </div>
-
-          <div class="faq__list" role="list">
-
-            <details class="faq__item" role="listitem">
-              <summary class="faq__question">
-                <span class="faq__question-text">Как проходит стерилизация инструментов?</span>
-                <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </summary>
-              <div class="faq__answer">
-                <p>Все инструменты проходят профессиональную стерилизацию в паровом автоклаве после каждого клиента. Используем одноразовые пилочки и апельсиновые палочки. Имеются журналы стерилизации и сертификаты.</p>
-              </div>
-            </details>
-
-            <details class="faq__item" role="listitem">
-              <summary class="faq__question">
-                <span class="faq__question-text">Можно ли перенести или отменить запись?</span>
-                <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </summary>
-              <div class="faq__answer">
-                <p>Перенос или отмену принимаем без штрафов при уведомлении не менее чем за 2 часа. Напишите нам в Telegram или WhatsApp.</p>
-              </div>
-            </details>
-
-            <details class="faq__item" role="listitem">
-              <summary class="faq__question">
-                <span class="faq__question-text">Какие покрытия вы используете?</span>
-                <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </summary>
-              <div class="faq__answer">
-                <p>Работаем с OPI, CND Shellac, Gelish и Naomi. По запросу подбираем гипоаллергенные варианты без HEMA и ксилена — уточняйте при записи.</p>
-              </div>
-            </details>
-
-            <details class="faq__item" role="listitem">
-              <summary class="faq__question">
-                <span class="faq__question-text">Сколько длится процедура маникюра?</span>
-                <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </summary>
-              <div class="faq__answer">
-                <p>Классический маникюр — 60–90 минут. С авторским дизайном — от 90 минут до 2,5 часов в зависимости от сложности. Мы всегда заранее сообщаем точное время.</p>
-              </div>
-            </details>
-
-            <details class="faq__item" role="listitem">
-              <summary class="faq__question">
-                <span class="faq__question-text">Как работает программа лояльности?</span>
-                <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </summary>
-              <div class="faq__answer">
-                <p>1 ₽ = 1 балл. Серебряный (0–500 баллов) — +3% кешбэк. Золотой (500–2 000) — +7%. Платиновый (2 000+) — +12% и VIP-привилегии. Баллы не сгорают.</p>
-              </div>
-            </details>
-
-            <details class="faq__item" role="listitem">
-              <summary class="faq__question">
-                <span class="faq__question-text">Есть ли у вас парковка?</span>
-                <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </summary>
-              <div class="faq__answer">
-                <p>Ближайшая бесплатная парковка — во дворах на ул. Рубинштейна. До студии 5 минут пешком от ст. м. Достоевская или Владимирская.</p>
-              </div>
-            </details>
-
-          </div>
-        </div>
-        
-      </div>
-    </section>
-
   </main>
 
 
@@ -1436,25 +1896,39 @@
 
     <div class="footer__main">
       <div class="footer__brand">
-        <a href="#hero" class="footer__logo" aria-label="LunaNail Studio — на главную">
+        <a href="#hero" class="footer__logo" aria-label="Neva Nail — на главную">
           <div class="footer__logo-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <img src="images/logo/logo.svg" alt="Neva Nail Logo" width="28" height="28" aria-hidden="true">
           </div>
-          <span class="footer__logo-text">LunaNail Studio</span>
+          <span class="footer__logo-text">Neva Nail</span>
         </a>
-        <p class="footer__tagline">Студия авторского маникюра в Санкт-Петербурге. Работаем для тех, кто ценит качество и результат.</p>
+        <p class="footer__tagline">Студия авторского маникюра в Санкт-Петербурге. Работаем для тех, кто ценит качество и
+          результат.</p>
         <nav class="footer__socials" aria-label="Социальные сети">
-          <a href="#" class="footer__social" aria-label="Instagram (откроется в новой вкладке)" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <a href="#" class="footer__social" aria-label="Instagram (откроется в новой вкладке)"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
           </a>
-          <a href="#" class="footer__social" aria-label="ВКонтакте (откроется в новой вкладке)" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 2H3v20l4-4h14V2z"/></svg>
+          <!-- WhatsApp instead of VK -->
+          <a href="#" class="footer__social" aria-label="WhatsApp (откроется в новой вкладке)"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 21 4.5 15a8.955 8.955 0 1 1 3.315 3.315Z" />
+            </svg>
           </a>
-          <a href="#" class="footer__social" aria-label="Telegram (откроется в новой вкладке)" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-          </a>
-          <a href="#" class="footer__social" aria-label="WhatsApp (откроется в новой вкладке)" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21 4.5 15a8.955 8.955 0 1 1 3.315 3.315Z"/></svg>
+          <a href="#" class="footer__social" aria-label="Telegram (откроется в новой вкладке)"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg>
           </a>
         </nav>
       </div>
@@ -1473,10 +1947,7 @@
       <nav class="footer__nav-col" aria-label="Быстрые ссылки">
         <p class="footer__nav-title">Клиентам</p>
         <ul class="footer__nav-list" role="list">
-          <li><a href="#pricing" class="footer__nav-link">Прайс</a></li>
-          <li><a href="#offers" class="footer__nav-link">Акции</a></li>
           <li><a href="#reviews" class="footer__nav-link">Отзывы</a></li>
-          <li><a href="#faq" class="footer__nav-link">Вопросы</a></li>
           <li><a href="#booking" class="footer__nav-link">Записаться</a></li>
         </ul>
       </nav>
@@ -1485,19 +1956,35 @@
         <p class="footer__nav-title">Контакты</p>
         <address>
           <div class="footer__contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
             <span>ул. Рубинштейна, д. 12, лит. А, Санкт-Петербург</span>
           </div>
           <div class="footer__contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
             <a href="tel:+78129001122">+7 (812) 900-11-22</a>
           </div>
           <div class="footer__contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            <a href="mailto:hello@lunanail.spb.ru">hello@lunanail.spb.ru</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <a href="mailto:hello@nevanail.ru">hello@nevanail.ru</a>
           </div>
           <div class="footer__contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
             <span>Пн–Вс: 10:00–21:00</span>
           </div>
         </address>
@@ -1507,12 +1994,9 @@
     <!-- Map placeholder -->
     <div class="footer__map" aria-label="Карта расположения студии">
       <div class="footer__map-inner" style="position:relative;overflow:hidden;height:100%;">
-        <iframe
-          title="Карта LunaNail Studio на ул. Рубинштейна"
-          src="https://maps.google.com/maps?q=59.9245,30.3450&z=16&output=embed"
-          width="100%" height="100%"
-          style="border:0; filter:saturate(0.4) hue-rotate(220deg);"
-          allowfullscreen loading="lazy"
+        <iframe title="Карта Neva Nail на ул. Рубинштейна"
+          src="https://maps.google.com/maps?q=59.9245,30.3450&z=16&output=embed" width="100%" height="100%"
+          style="border:0; filter:saturate(0.4) hue-rotate(220deg);" allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
@@ -1521,7 +2005,7 @@
     <!-- Bottom bar -->
     <div class="footer__bottom">
       <p class="footer__copy">
-        <span class="text-mono">&copy; 2026 LunaNail Studio. Все права защищены.</span>
+        <span class="text-mono">&copy; 2026 Neva Nail. Все права защищены.</span>
       </p>
       <nav class="footer__legal" aria-label="Юридические документы">
         <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
@@ -1534,4 +2018,5 @@
   <!-- JS modules -->
   <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

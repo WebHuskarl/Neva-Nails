@@ -7,7 +7,7 @@
 .masters__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--sp-8);
+  gap: var(--sp-5);
 }
 
 .master-card {
@@ -106,7 +106,7 @@
 
 /* Info bar */
 .master-card__info {
-  padding: var(--sp-4) var(--sp-6) var(--sp-6);
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
 }
 .master-card__name {
   font-family: var(--font-display);
@@ -116,11 +116,10 @@
   margin-bottom: var(--sp-1);
 }
 .master-card__role {
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  color: var(--color-lilac);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: var(--font-script);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  color: var(--color-violet);
   margin-bottom: var(--sp-4);
 }
 

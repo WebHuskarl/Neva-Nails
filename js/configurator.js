@@ -103,7 +103,8 @@ export function initConfigurator() {
     choiceWrap.classList.add('is-visible');
 
     const commentField = document.querySelector('#comment');
-    if (commentField && !commentField.value) {
+    /* Always sync comment unless user manually edited it */
+    if (commentField && !commentField.dataset.userEdited) {
       commentField.value = `Дизайн: ${result}`;
     }
   }

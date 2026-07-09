@@ -4,7 +4,7 @@
 
 .reviews {
   overflow: hidden;
-  padding-bottom: var(--sp-12);
+  padding-bottom: var(--sp-8);
 }
 
 /* ---- Carousel wrapper (flex: nav + viewport + nav) ---- */
@@ -81,12 +81,12 @@
   background: var(--color-bg-raised);
   border: var(--border-hairline);
   border-radius: var(--radius-xl);
-  padding: var(--sp-6);
+  padding: var(--sp-5) var(--sp-5);
   /* ~1 card visible, partial on sides */
   flex: 0 0 min(82vw, 22rem);
   display: flex;
   flex-direction: column;
-  gap: var(--sp-4);
+  gap: var(--sp-3);
   position: relative;
   overflow: hidden;
   transition: border-color var(--transition), box-shadow var(--transition-slow), opacity var(--transition-slow), transform var(--transition-slow);
@@ -121,11 +121,12 @@
 }
 
 .review-card__text {
-  font-size: var(--fs-sm);
+  font-family: var(--font-script);
+  font-size: var(--fs-md);
+  font-style: italic;
   color: var(--color-ink-secondary);
   line-height: var(--lh-relaxed);
   flex: 1;
-  font-style: italic;
 }
 .review-card__text::before { content: '\201C'; color: var(--color-lilac); font-size: 1.25em; }
 .review-card__text::after  { content: '\201D'; color: var(--color-lilac); font-size: 1.25em; }

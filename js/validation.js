@@ -154,6 +154,11 @@ export function initValidation() {
       submitBtn.textContent = 'Отправляем...';
     }
 
+    // Hide design banner immediately on submit (don't wait for timeout)
+    const designBannerImmediate = document.getElementById('booking-design-choice');
+    if (designBannerImmediate) designBannerImmediate.classList.remove('is-visible');
+    sessionStorage.removeItem('nail_design');
+
     // Simulate async send (replace with real fetch/API call)
     setTimeout(() => {
       /* Hide entire form inner block (label + design tag + form) */
@@ -162,11 +167,6 @@ export function initValidation() {
         successEl.classList.add('is-visible');
         successEl.querySelector('h3')?.focus();
       }
-      /* Clear sessionStorage design choice */
-      sessionStorage.removeItem('nail_design');
-      /* Also hide design choice banner */
-      const designBanner = document.getElementById('booking-design-choice');
-      if (designBanner) designBanner.classList.remove('is-visible');
     }, 800);
   });
 
