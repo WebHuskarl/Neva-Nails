@@ -82,6 +82,25 @@
 .trust__marquee::before { left: 0; background: linear-gradient(to right, var(--color-bg-raised), transparent); }
 .trust__marquee::after  { right: 0; background: linear-gradient(to left, var(--color-bg-raised), transparent); }
 
+.trust__marquee .marquee {
+  padding-block: var(--sp-3); /* prevent cropping when images scale on hover */
+}
+
+@keyframes marquee-scroll-trust {
+  to { transform: translateX(calc(-100% / var(--groups))); }
+}
+
+.trust__track {
+  gap: 0;
+  animation: marquee-scroll-trust 40s linear infinite;
+}
+
+.marquee__group {
+  display: inline-flex;
+  gap: var(--sp-12);
+  padding-right: var(--sp-12);
+}
+
 /* Individual brand item */
 .trust__brand {
   display: inline-flex;
@@ -102,17 +121,20 @@
   transform: translateY(-2px);
 }
 
-/* Brand SVG icon */
-.trust__brand-icon {
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
-  color: var(--color-violet);
-  opacity: 0.5;
-  transition: opacity var(--transition);
+/* Brand Logo Image */
+.trust__brand-img {
+  max-height: 32px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  transition: filter var(--transition), opacity var(--transition), transform var(--transition-spring);
 }
-.trust__brand:hover .trust__brand-icon {
+.trust__brand:hover .trust__brand-img {
   opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
 
 @media (min-width: 48rem) {

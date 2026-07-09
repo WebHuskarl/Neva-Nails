@@ -153,6 +153,14 @@ export function initConfigurator() {
     });
   });
 
+  window.selectPromo = function(value) {
+    const select = document.getElementById('promo');
+    if (select) {
+      select.value = value;
+      select.dispatchEvent(new Event('change'));
+    }
+  };
+
   /* ---- Spotlight / cursor follow in hero ---- */
   if (spotlight) {
     const heroSection = document.querySelector('[data-section="hero"]');

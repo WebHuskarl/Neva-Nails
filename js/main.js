@@ -127,4 +127,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  /* ---- Promo Glare Hover Effect ---- */
+  const promos = document.querySelectorAll('.promo-banner');
+  promos.forEach(promo => {
+    promo.addEventListener('mousemove', (e) => {
+      const rect = promo.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      promo.style.setProperty('--mouse-x', `${x}px`);
+      promo.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
 });
