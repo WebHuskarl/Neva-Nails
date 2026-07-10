@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    HERO — video bg, spotlight, pearl badge with social icons,
           scroll indicator
    ============================================================ */
@@ -60,17 +60,7 @@
   .hero__video { object-position: center; }
 }
 
-/* Watermark cover */
-.hero__wm-cover {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 16rem;
-  height: 5rem;
-  background: linear-gradient(to top left, rgba(248,247,244,0.95) 0%, transparent 100%);
-  z-index: 3;
-  pointer-events: none;
-}
+
 
 /* Idle animation */
 @keyframes hero-video-idle {
@@ -89,23 +79,23 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 65% 35%, rgba(124, 92, 255, 0.10) 0%, transparent 55%),
-    radial-gradient(ellipse at 15% 75%, rgba(29, 181, 154, 0.07) 0%, transparent 50%),
-    linear-gradient(to bottom, rgba(248,247,244,0.55) 0%, rgba(248,247,244,0.25) 40%, rgba(248,247,244,0.75) 100%);
+    radial-gradient(ellipse at 65% 35%, rgba(124, 92, 255, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(29, 181, 154, 0.10) 0%, transparent 50%),
+    linear-gradient(to bottom, rgba(248,247,244,0.70) 0%, rgba(248,247,244,0.4) 40%, rgba(248,247,244,0.85) 100%);
   z-index: 1;
 }
 
 /* Spotlight cursor-follow */
 .hero__spotlight {
   position: absolute;
-  width: 30rem;
-  height: 30rem;
+  width: 40rem;
+  height: 40rem;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(124, 92, 255, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(124, 92, 255, 0.15) 0%, transparent 70%);
   pointer-events: none;
   z-index: 2;
   transform: translate(-50%, -50%);
-  transition: left 0.15s ease-out, top 0.15s ease-out;
+  transition: left 0.1s ease-out, top 0.1s ease-out;
   left: 50%;
   top: 40%;
 }
@@ -228,10 +218,10 @@
    ============================================================ */
 .hero__badge {
   position: absolute;
-  right: 3.125rem;
-  bottom: 3.125rem;
-  width: 7.5rem;
-  height: 7.5rem;
+  right: calc(clamp(0.5rem, 2vw, 1.5rem) + clamp(1.6rem, 3.2vmin, 2.8rem));
+  bottom: calc(clamp(0.5rem, 2vh, 1.5rem) + clamp(1.6rem, 3.2vmin, 2.8rem));
+  width: clamp(8rem, 16vmin, 14rem);
+  height: clamp(8rem, 16vmin, 14rem);
   z-index: 5;
   display: none;
   text-decoration: none;

@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    MEDIA QUERIES — mobile-first overrides not covered by clamp()
    ============================================================ */
 
@@ -55,10 +55,27 @@
   .hero__content { padding-block: var(--sp-20) var(--sp-12); }
 }
 
-/* ---- 2xl: 1536px / 96rem ---- */
-@media (min-width: 96rem) {
+/* ---- xl-plus: 1200px / 75rem ---- */
+@media (min-width: 75rem) {
   .services__grid { grid-template-columns: repeat(4, 1fr); }
   .masters__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---- Short screens (landscape on laptops) ---- */
+@media (max-height: 850px) and (min-width: 48rem) {
+  .hero__content {
+    padding-block: var(--sp-8) var(--sp-6) !important;
+    gap: var(--sp-5);
+  }
+  .hero__title {
+    font-size: clamp(2.25rem, min(6vw, 8vh), 4.5rem) !important;
+  }
+  .hero__subtitle {
+    max-width: 32rem;
+  }
+  .hero__main {
+    gap: var(--sp-4);
+  }
 }
 
 /* ---- Print ---- */
