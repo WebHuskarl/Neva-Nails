@@ -98,13 +98,6 @@ export function initHeroVideo() {
     return;
   }
 
-  /* ── Desktop: Load video lazily ──────────────────────────── */
-  const source = video.querySelector('source');
-  if (source && source.dataset.src) {
-    source.src = source.dataset.src;
-    video.load();
-  }
-
   /* ── Обработчики готовности видео ────────────────────────── */
   if (video.readyState >= 3) {
     revealVideo();

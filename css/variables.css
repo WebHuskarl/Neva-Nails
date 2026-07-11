@@ -38,9 +38,9 @@
   --grad-hairline: linear-gradient(90deg, transparent 0%, #B9A0FF 30%, #7C5CFF 50%, #1DB59A 70%, transparent 100%);
 
   /* --- Typography (TORN ELEGANCE) --- */
-  --font-display: 'Unbounded', system-ui, sans-serif;
-  --font-body: 'Manrope', system-ui, sans-serif;
-  --font-script: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-display: 'Geologica', system-ui, sans-serif;
+  --font-body: 'Golos Text', system-ui, sans-serif;
+  --font-script: 'Georgia', 'Times New Roman', serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
   /* --- Font weights --- */
