@@ -87,6 +87,24 @@ export function initHeroVideo() {
     }
   }
 
+  /* ── Mobile or Reduced Motion: skip video completely ──────── */
+  const isMobile = window.innerWidth < 768;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (isMobile || reducedMotion) {
+    revealVideo();
+    hero.classList.add('hero--idle');
+    startSlideshow();
+    return;
+  }
+
+  /* ── Desktop: Load video lazily ──────────────────────────── */
+  const source = video.querySelector('source');
+  if (source && source.dataset.src) {
+    source.src = source.dataset.src;
+    video.load();
+  }
+
   /* ── Обработчики готовности видео ────────────────────────── */
   if (video.readyState >= 3) {
     revealVideo();
@@ -120,11 +138,4 @@ export function initHeroVideo() {
   }, { threshold: 0 });
 
   io.observe(hero);
-
-  /* ── Reduced motion: сразу слайдшоу без анимации ─────────── */
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    revealVideo();
-    hero.classList.add('hero--idle');
-    startSlideshow();
-  }
 }
