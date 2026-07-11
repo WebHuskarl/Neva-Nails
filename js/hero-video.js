@@ -10,24 +10,24 @@
  *  • Плавное появление: видео невидимо пока не готово к воспроизведению.
  */
 
-const PAUSE_AT       = 7;    /* секунды */
+const PAUSE_AT = 7;    /* секунды */
 const SLIDE_INTERVAL = 5000; /* мс между сменой фото */
 
 export function initHeroVideo() {
-  const hero      = document.querySelector('[data-section="hero"]');
-  const video     = document.querySelector('[data-hero-video]');
+  const hero = document.querySelector('[data-section="hero"]');
+  const video = document.querySelector('[data-hero-video]');
   const slideshow = document.querySelector('[data-hero-slideshow]');
-  const slides    = slideshow ? [...slideshow.querySelectorAll('.hero__slide')] : [];
+  const slides = slideshow ? [...slideshow.querySelectorAll('.hero__slide')] : [];
 
   if (!hero || !video) return;
 
-  let played       = false;
-  let heroGone     = false;
-  let slideTimer   = null;
+  let played = false;
+  let heroGone = false;
+  let slideTimer = null;
   let currentSlide = 0;
 
   /* ── Плавная загрузка ─────────────────────────────────────── */
-  video.style.opacity   = '0';
+  video.style.opacity = '0';
   video.style.transition = 'opacity 0.6s ease';
 
   function revealVideo() {
@@ -96,6 +96,13 @@ export function initHeroVideo() {
     hero.classList.add('hero--idle');
     startSlideshow();
     return;
+  }
+
+  /* ── Desktop: Load video lazily ──────────────────────────── */
+  const source = video.querySelector('source');
+  if (source && source.dataset.src) {
+    source.src = source.dataset.src;
+    video.load();
   }
 
   /* ── Обработчики готовности видео ────────────────────────── */
