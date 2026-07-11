@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    BOOKING — two-column layout: info left, form right
    ============================================================ */
 
@@ -68,7 +68,6 @@
 
 /* Design choice from configurator */
 .booking__design-choice {
-  display: none;
   background: rgba(124,92,255,0.06);
   border: 1px solid rgba(124,92,255,0.2);
   clip-path: var(--clip-angular);

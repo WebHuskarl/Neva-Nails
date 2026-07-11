@@ -89,22 +89,23 @@ export function initConfigurator() {
     const bookingResult = state.discount > 0
       ? `${result} (скидка −${state.discount}%)`
       : result;
-    sessionStorage.setItem('nail_design', bookingResult);
-
-    updateBookingDesign(bookingResult);
+    // We do NOT save to sessionStorage or update the booking form here anymore.
+    // That only happens when the user clicks 'bookBtn'.
   }
 
   /* ---- Pass to booking ---- */
   function updateBookingDesign(result) {
     const choiceWrap = document.getElementById('booking-design-choice');
     const choiceText = document.querySelector('[data-design-choice-text]');
+    const clearBtn   = document.querySelector('[data-clear-design]');
     if (!choiceWrap || !choiceText) return;
     choiceText.textContent = result;
-    choiceWrap.classList.add('is-visible');
+    if (clearBtn) clearBtn.style.display = 'inline-flex';
 
     const commentField = document.querySelector('#comment');
-    /* Always sync comment unless user manually edited it */
-    if (commentField && !commentField.dataset.userEdited) {
+    if (window.updateBookingComment) {
+      window.updateBookingComment('design', result);
+    } else if (commentField && !commentField.dataset.userEdited) {
       commentField.value = `Дизайн: ${result}`;
     }
   }
@@ -113,11 +114,16 @@ export function initConfigurator() {
   const clearBtn = document.querySelector('[data-clear-design]');
   if (clearBtn) {
     clearBtn.addEventListener('click', () => {
-      const choiceWrap = document.getElementById('booking-design-choice');
-      choiceWrap?.classList.remove('is-visible');
+      const choiceText = document.querySelector('[data-design-choice-text]');
+      if (choiceText) choiceText.innerHTML = '<a href="#configurator" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Выберите дизайн в конфигураторе</a>';
+      clearBtn.style.display = 'none';
       sessionStorage.removeItem('nail_design');
-      const commentField = document.querySelector('#comment');
-      if (commentField) commentField.value = '';
+      if (window.updateBookingComment) {
+        window.updateBookingComment('design', '');
+      } else {
+        const commentField = document.querySelector('#comment');
+        if (commentField) commentField.value = '';
+      }
     });
   }
 
@@ -137,11 +143,22 @@ export function initConfigurator() {
   });
 
   document.querySelectorAll('input[name="season"]').forEach(input => {
-    input.addEventListener('change', () => {
+    input.addEventListener('change', (e) => {
       state.season       = input.value;
       state.discount     = parseInt(input.dataset.discount || '0', 10);
       state.discountNote = input.dataset.discountNote || '';
       updatePreview();
+
+      const promoSelect = document.getElementById('promo');
+      if (promoSelect && !e.detail?.autoSync) {
+        if (['birthday', 'wedding', 'holiday', 'corporate'].includes(state.season)) {
+          promoSelect.value = state.season;
+          promoSelect.dispatchEvent(new CustomEvent('change', { detail: 'auto-sync' }));
+        } else if (promoSelect.value && ['birthday', 'wedding', 'holiday', 'corporate'].includes(promoSelect.value)) {
+          promoSelect.value = '';
+          promoSelect.dispatchEvent(new CustomEvent('change', { detail: 'auto-sync' }));
+        }
+      }
     });
   });
 
@@ -161,6 +178,14 @@ export function initConfigurator() {
     }
   };
 
+  window.selectConfiguratorSeason = function(value) {
+    const input = document.querySelector(`input[name="season"][value="${value}"]`);
+    if (input && !input.checked) {
+      input.checked = true;
+      input.dispatchEvent(new CustomEvent('change', { detail: { autoSync: true } }));
+    }
+  };
+
   /* ---- Spotlight / cursor follow in hero ---- */
   if (spotlight) {
     const heroSection = document.querySelector('[data-section="hero"]');
@@ -177,6 +202,16 @@ export function initConfigurator() {
   if (bookBtn) {
     bookBtn.addEventListener('click', e => {
       e.preventDefault();
+      
+      const shapeLabel  = document.querySelector(`input[name="shape"][value="${state.shape}"]`)?.closest('.config-option')?.querySelector('.config-option__label')?.textContent?.trim() || state.shape;
+      const lengthLabel = document.querySelector(`input[name="length"][value="${state.length}"]`)?.closest('.config-option')?.querySelector('.config-option__label')?.textContent?.trim() || state.length;
+      const seasonLabel = seasonLabels[state.season] || state.season;
+      const result = `${shapeLabel} / ${lengthLabel} / ${state.colorName} / ${seasonLabel}`;
+      const bookingResult = state.discount > 0 ? `${result} (скидка −${state.discount}%)` : result;
+      
+      sessionStorage.setItem('nail_design', bookingResult);
+      updateBookingDesign(bookingResult);
+
       const bookingSection = document.getElementById('booking');
       if (bookingSection) {
         bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });

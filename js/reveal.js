@@ -27,8 +27,7 @@ export function initReveal() {
     'section:not(.hero) .btn',
     '.footer__info',
     '.footer__nav-col',
-    '.footer__map',
-    '.footer__bottom'
+    '.footer__map'
   ];
 
   const leftElements = document.querySelectorAll(leftSelectors.join(', '));

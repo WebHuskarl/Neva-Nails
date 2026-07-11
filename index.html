@@ -1792,8 +1792,8 @@
             <!-- Design choice from configurator -->
             <div class="booking__design-choice" id="booking-design-choice">
               <p class="booking__design-choice-label">Выбранный дизайн из конфигуратора:</p>
-              <p class="booking__design-choice-value" data-design-choice-text></p>
-              <button class="btn btn--ghost" data-clear-design style="font-size:0.75rem;margin-top:0.5rem;">×
+              <p class="booking__design-choice-value" data-design-choice-text><a href="#configurator" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Выберите дизайн в конфигураторе</a></p>
+              <button class="btn btn--ghost" data-clear-design style="font-size:0.75rem;margin-top:0.5rem;display:none;">×
                 Сбросить</button>
             </div>
           </div>
@@ -1808,6 +1808,7 @@
                   <select class="form__select" id="service" name="service" required aria-required="true"
                     data-form-field>
                     <option value="" disabled selected>Выберите услугу</option>
+                    <option value="set_all_inclusive" style="color: var(--color-violet); font-weight: bold;">⭐️ Акция: Сет «Всё включено»</option>
                     <option value="manicure">Маникюр</option>
                     <option value="pedicure">Педикюр</option>
                     <option value="gel">Гель-лак</option>
@@ -1877,6 +1878,10 @@
                   <option value="" selected>Не использовать акции</option>
                   <option value="set">Сет «Всё включено»</option>
                   <option value="welcome">Welcome-бонус на первый визит (−15%)</option>
+                  <option value="birthday">День рождения (−20%)</option>
+                  <option value="wedding">Свадьба / Годовщина (−15%)</option>
+                  <option value="holiday">Праздник (−7%)</option>
+                  <option value="corporate">Корпоратив (−10%)</option>
                 </select>
               </div>
 

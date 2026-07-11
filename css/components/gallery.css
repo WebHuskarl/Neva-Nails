@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    GALLERY / PORTFOLIO — filters, masonry-style grid, lightbox
    ============================================================ */
 
@@ -122,11 +122,14 @@
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-slow);
+  visibility: hidden;
+  transition: opacity var(--transition-slow), visibility 0s linear 0.4s;
 }
 .lightbox.is-open {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
+  transition: opacity var(--transition-slow), visibility 0s linear 0s;
 }
 .lightbox__inner {
   position: relative;

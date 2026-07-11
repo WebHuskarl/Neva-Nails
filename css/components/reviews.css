@@ -36,12 +36,8 @@
   transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition-slow);
   box-shadow: var(--shadow-sm);
 }
-.reviews__nav--prev { left: 0.25rem; }
-.reviews__nav--next { right: 0.25rem; }
-@media (min-width: 48rem) {
-  .reviews__nav--prev { left: -1rem; }
-  .reviews__nav--next { right: -1rem; }
-}
+.reviews__nav--prev { left: 0.5rem; }
+.reviews__nav--next { right: 0.5rem; }
 
 .reviews__nav:hover {
   background: var(--color-violet);

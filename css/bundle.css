@@ -2245,11 +2245,14 @@ body::before {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-slow);
+  visibility: hidden;
+  transition: opacity var(--transition-slow), visibility 0s linear 0.4s;
 }
 .lightbox.is-open {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
+  transition: opacity var(--transition-slow), visibility 0s linear 0s;
 }
 .lightbox__inner {
   position: relative;
@@ -2852,12 +2855,8 @@ body::before {
   transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition-slow);
   box-shadow: var(--shadow-sm);
 }
-.reviews__nav--prev { left: 0.25rem; }
-.reviews__nav--next { right: 0.25rem; }
-@media (min-width: 48rem) {
-  .reviews__nav--prev { left: -1rem; }
-  .reviews__nav--next { right: -1rem; }
-}
+.reviews__nav--prev { left: 0.5rem; }
+.reviews__nav--next { right: 0.5rem; }
 
 .reviews__nav:hover {
   background: var(--color-violet);
@@ -3086,7 +3085,6 @@ body::before {
 
 /* Design choice from configurator */
 .booking__design-choice {
-  display: none;
   background: rgba(124,92,255,0.06);
   border: 1px solid rgba(124,92,255,0.2);
   clip-path: var(--clip-angular);
@@ -3469,7 +3467,7 @@ body::before {
 .footer__copy {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--color-pearl-muted);
+  color: var(--color-ink-secondary);
   letter-spacing: 0.08em;
 }
 .footer__legal {
@@ -3480,7 +3478,7 @@ body::before {
 .footer__legal-link {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--color-pearl-muted);
+  color: var(--color-ink-secondary);
   letter-spacing: 0.08em;
   text-decoration: underline;
   text-underline-offset: 3px;

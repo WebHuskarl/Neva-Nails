@@ -13,6 +13,34 @@ import { initHeroVideo }   from './hero-video.js';
 import { initReviews }    from './reviews.js';
 import { initReveal }     from './reveal.js';
 
+/* ---- Global Comment Manager ---- */
+window.updateBookingComment = function(type, text) {
+  const commentField = document.getElementById('comment');
+  if (!commentField) return;
+  
+  let val = commentField.value;
+  
+  const prefixes = {
+    design: '💅 Дизайн:',
+    promo: '🎁 Акция:',
+  };
+  
+  const prefix = prefixes[type];
+  if (!prefix) return;
+
+  // Remove existing line with this prefix
+  const regex = new RegExp(`^${prefix}.*$(\\r\\n|\\r|\\n)?`, 'gm');
+  val = val.replace(regex, '');
+  
+  // Append new line if text is provided
+  if (text) {
+    if (val && !val.endsWith('\n')) val += '\n';
+    val += `${prefix} ${text}\n`;
+  }
+  
+  commentField.value = val.trimStart();
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   initHeroVideo();
   initMenu();
@@ -84,6 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---- Anti-Injection for Comment Field ---- */
+  const commentFieldGlobal = document.getElementById('comment');
+  if (commentFieldGlobal) {
+    commentFieldGlobal.addEventListener('input', (e) => {
+      const sanitized = e.target.value.replace(/[<>]/g, '');
+      if (e.target.value !== sanitized) {
+        e.target.value = sanitized;
+      }
+    });
+  }
+
   /* ---- Interactive Services Logic ---- */
   const serviceCards = document.querySelectorAll('.service-card[data-service-name]');
   const bookingComment = document.getElementById('comment');
@@ -95,10 +134,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target.closest('a')) return;
       
       const serviceName = card.dataset.serviceName;
+      const bookingService = document.getElementById('service');
       if (bookingComment && bookingSection) {
         bookingSection.scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => {
-          bookingComment.value = `Хочу записаться на услугу: ${serviceName}`;
+          if (serviceName.toLowerCase().includes('все включено')) {
+            if (bookingService) bookingService.value = 'set_all_inclusive';
+            window.updateBookingComment('promo', 'Сет «Всё включено» (маникюр, педикюр, покрытие и снятие)');
+          } else {
+            if (bookingService) {
+              const opts = Array.from(bookingService.options);
+              const opt = opts.find(o => o.text.includes(serviceName) || o.value === serviceName);
+              if (opt) bookingService.value = opt.value;
+            }
+          }
+          // trigger change event to update step indicators
+          if (bookingService) bookingService.dispatchEvent(new Event('change'));
           bookingComment.focus();
         }, 500); // Wait for scroll
       }
@@ -123,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (bookingComment && bookingSection) {
         bookingSection.scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => {
-          bookingComment.value = `Я новый клиент, хочу использовать приветственный бонус по программе лояльности!`;
+          window.updateBookingComment('promo', 'Приветственный бонус по программе лояльности');
           bookingComment.focus();
         }, 500);
       }
@@ -140,4 +191,70 @@ document.addEventListener('DOMContentLoaded', () => {
       promo.style.setProperty('--mouse-y', `${y}px`);
     });
   });
+
+  /* ---- Promo & Service Sync Logic ---- */
+  const promoSelect = document.getElementById('promo');
+  const serviceSelect = document.getElementById('service');
+  
+  if (promoSelect) {
+    promoSelect.addEventListener('change', (e) => {
+      if (e.detail === 'auto-sync') return;
+      
+      const val = promoSelect.value;
+      
+      // If promo changed away from 'set' but service is still 'set_all_inclusive', clear service
+      if (val !== 'set' && serviceSelect && serviceSelect.value === 'set_all_inclusive') {
+        serviceSelect.value = '';
+        serviceSelect.dispatchEvent(new CustomEvent('change', { detail: 'auto-sync' }));
+      }
+
+      if (val === 'set') {
+        if (serviceSelect && serviceSelect.value !== 'set_all_inclusive') {
+          serviceSelect.value = 'set_all_inclusive';
+          serviceSelect.dispatchEvent(new CustomEvent('change', { detail: 'auto-sync' }));
+        }
+        window.updateBookingComment('promo', 'Сет «Всё включено» (маникюр, педикюр, покрытие и снятие)');
+      } else if (val === 'welcome') {
+        window.updateBookingComment('promo', 'Welcome-бонус на первый визит (−15%)');
+      } else if (val === 'birthday') {
+        window.updateBookingComment('promo', 'День рождения (−20%)');
+        if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('birthday');
+      } else if (val === 'wedding') {
+        window.updateBookingComment('promo', 'Свадьба / Годовщина (−15%)');
+        if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('wedding');
+      } else if (val === 'holiday') {
+        window.updateBookingComment('promo', 'Праздник (−7%)');
+        if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('holiday');
+      } else if (val === 'corporate') {
+        window.updateBookingComment('promo', 'Корпоратив (−10%)');
+        if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('corporate');
+      } else {
+        window.updateBookingComment('promo', '');
+        if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('everyday');
+      }
+    });
+  }
+
+  if (serviceSelect) {
+    serviceSelect.addEventListener('change', (e) => {
+      if (e.detail === 'auto-sync') return;
+      
+      const val = serviceSelect.value;
+      
+      // If service changed away from 'set_all_inclusive' but promo is still 'set', clear promo
+      if (val !== 'set_all_inclusive' && promoSelect && promoSelect.value === 'set') {
+        promoSelect.value = '';
+        promoSelect.dispatchEvent(new CustomEvent('change', { detail: 'auto-sync' }));
+        window.updateBookingComment('promo', '');
+      }
+
+      if (val === 'set_all_inclusive') {
+        if (promoSelect && promoSelect.value !== 'set') {
+          promoSelect.value = 'set';
+          promoSelect.dispatchEvent(new CustomEvent('change', { detail: 'auto-sync' }));
+        }
+        window.updateBookingComment('promo', 'Сет «Всё включено» (маникюр, педикюр, покрытие и снятие)');
+      }
+    });
+  }
 });
