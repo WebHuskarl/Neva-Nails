@@ -19,7 +19,7 @@
   font-size: var(--fs-xs);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-pearl-dim);
+  color: var(--color-ink-secondary);
   margin-bottom: var(--sp-4);
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@
   display: inline-block;
   width: 0.75rem;
   height: 1px;
-  background: var(--color-lilac);
+  background: var(--color-violet);
 }
 
 /* Pill toggles */
@@ -54,9 +54,9 @@
   gap: var(--sp-2);
   padding: 0.5rem 1.125rem;
   border-radius: var(--radius-full);
-  border: 1px solid var(--color-graphite);
+  border: 1px solid var(--color-border);
   font-size: var(--fs-sm);
-  color: var(--color-pearl-dim);
+  color: var(--color-ink-secondary);
   cursor: pointer;
   transition: border-color var(--transition), color var(--transition), background var(--transition), box-shadow var(--transition);
   user-select: none;
@@ -64,7 +64,7 @@
 }
 .config-option__label:hover {
   border-color: rgba(185,160,255,0.4);
-  color: var(--color-pearl);
+  color: var(--color-ink);
 }
 .config-option input:checked + .config-option__label {
   border-color: var(--color-violet);
@@ -73,7 +73,7 @@
   box-shadow: 0 0 0.75rem var(--color-violet-glow-s);
 }
 .config-option input:focus-visible + .config-option__label {
-  outline: 2px solid var(--color-lilac);
+  outline: 2px solid var(--color-violet);
   outline-offset: 2px;
 }
 
@@ -104,8 +104,8 @@
   transition: outline-color var(--transition), transform var(--transition-spring);
 }
 .config-color__swatch:hover { transform: scale(1.15); }
-.config-color input:checked + .config-color__swatch { outline-color: var(--color-lilac); }
-.config-color input:focus-visible + .config-color__swatch { outline-color: var(--color-pearl); }
+.config-color input:checked + .config-color__swatch { outline-color: var(--color-violet); }
+.config-color input:focus-visible + .config-color__swatch { outline-color: var(--color-ink); }
 
 /* Preview panel */
 .configurator__preview {
@@ -180,14 +180,14 @@
   font-size: var(--fs-xs);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-pearl-dim);
+  color: var(--color-ink-secondary);
   margin-bottom: var(--sp-4);
 }
 .configurator__result-name {
   font-family: var(--font-display);
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
-  color: var(--color-pearl);
+  color: var(--color-ink);
   margin-bottom: var(--sp-6);
 }
 

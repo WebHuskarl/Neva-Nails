@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: var(--color-lilac);
+  color: var(--color-violet);
   margin-bottom: var(--sp-6);
 }
 .pricing-card__icon svg { width: 2.5rem; height: 2.5rem; }
@@ -81,7 +81,7 @@
   top: -1px;
   right: 1.5rem;
   background: var(--grad-lilac);
-  color: var(--color-pearl);
+  color: var(--color-ink);
   font-family: var(--font-mono);
   font-size: 0.625rem;
   letter-spacing: 0.12em;
@@ -95,7 +95,7 @@
 .pricing-card__index {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--color-pearl-muted);
+  color: var(--color-ink-muted);
   letter-spacing: 0.15em;
   margin-bottom: var(--sp-4);
 }
@@ -104,13 +104,13 @@
   font-family: var(--font-display);
   font-size: var(--fs-xl);
   font-weight: var(--fw-bold);
-  color: var(--color-pearl);
+  color: var(--color-ink);
   margin-bottom: var(--sp-2);
   line-height: var(--lh-snug);
 }
 .pricing-card__desc {
   font-size: var(--fs-sm);
-  color: var(--color-pearl-dim);
+  color: var(--color-ink-secondary);
   line-height: var(--lh-relaxed);
   margin-bottom: var(--sp-6);
 }
@@ -125,9 +125,9 @@
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: var(--fw-extrabold);
   line-height: 1;
-  color: var(--color-pearl);
+  color: var(--color-ink);
 }
-.pricing-card--hit .pricing-card__amount { color: var(--color-lilac); }
+.pricing-card--hit .pricing-card__amount { color: var(--color-violet); }
 .pricing-card__currency {
   font-size: var(--fs-xl);
   vertical-align: top;
@@ -137,7 +137,7 @@
 .pricing-card__duration {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--color-pearl-muted);
+  color: var(--color-ink-muted);
   letter-spacing: 0.1em;
   margin-top: var(--sp-1);
   display: block;
@@ -155,21 +155,21 @@
   align-items: flex-start;
   gap: var(--sp-3);
   font-size: var(--fs-sm);
-  color: var(--color-pearl-dim);
+  color: var(--color-ink-secondary);
   line-height: var(--lh-normal);
 }
 .pricing-card__feature-icon {
   width: 1rem;
   height: 1rem;
-  color: var(--color-mineral);
+  color: var(--color-teal);
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
 .pricing-card__feature--disabled {
-  color: var(--color-pearl-muted);
+  color: var(--color-ink-muted);
   text-decoration: line-through;
 }
-.pricing-card__feature--disabled .pricing-card__feature-icon { color: var(--color-graphite-mid); }
+.pricing-card__feature--disabled .pricing-card__feature-icon { color: var(--color-border-mid); }
 
 .pricing-card__cta { margin-top: auto; }
 .pricing-card--hit .pricing-card__cta .btn--primary { animation: pearl-pulse 3s ease-in-out infinite; }

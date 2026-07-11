@@ -67,7 +67,7 @@
   font-family: var(--font-display);
   font-size: var(--fs-xl);
   font-weight: var(--fw-bold);
-  color: var(--color-pearl);
+  color: var(--color-ink);
 }
 .modal__close {
   width: 2rem;
@@ -76,12 +76,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-pearl-dim);
+  color: var(--color-ink-secondary);
   flex-shrink: 0;
   transition: background var(--transition), color var(--transition);
 }
-.modal__close:hover { background: var(--color-onyx); color: var(--color-lilac); }
-.modal__close:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
+.modal__close:hover { background: var(--color-bg); color: var(--color-violet); }
+.modal__close:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 2px; }
 .modal__close svg { width: 1.125rem; height: 1.125rem; pointer-events: none; }
 
 .modal__body { padding: var(--sp-6); }

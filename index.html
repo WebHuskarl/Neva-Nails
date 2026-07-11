@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Favicon — SVG logo converted -->
@@ -22,8 +22,29 @@
   <!-- Video Preload for instant play -->
   <link rel="preload" as="video" href="images/hero/hero.mp4">
 
-  <!-- Bundled CSS for fast rendering -->
-  <link rel="stylesheet" href="css/bundle.css">
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/trust.css">
+  <link rel="stylesheet" href="css/components/services.css">
+  <link rel="stylesheet" href="css/components/configurator.css">
+  <link rel="stylesheet" href="css/components/gallery.css">
+  <link rel="stylesheet" href="css/components/modal.css">
+  <link rel="stylesheet" href="css/components/masters.css">
+  <link rel="stylesheet" href="css/components/pricing.css">
+  <link rel="stylesheet" href="css/components/offers.css">
+  <link rel="stylesheet" href="css/components/loyalty.css">
+  <link rel="stylesheet" href="css/components/reviews.css">
+  <link rel="stylesheet" href="css/components/booking.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  
+  <!-- Media (Adaptive) -->
+  <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -2039,11 +2060,10 @@
 
     <!-- Map placeholder -->
     <div class="footer__map" aria-label="Карта расположения студии">
-      <div class="footer__map-inner" style="position:relative;overflow:hidden;height:100%;">
-        <iframe title="Карта Neva Nail на ул. Рубинштейна"
+      <div class="footer__map-inner">
+        <iframe class="footer__map-iframe" title="Карта Neva Nail на ул. Рубинштейна"
           src="https://maps.google.com/maps?q=59.9245,30.3450&z=16&output=embed" width="100%" height="100%"
-          style="border:0; filter:saturate(0.4) hue-rotate(220deg);" allowfullscreen loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </div>
@@ -2063,14 +2083,6 @@
 
   <!-- JS modules -->
   <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/validation.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const monthsGenitive = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-      const el = document.getElementById('dynamic-month');
-      if (el) el.textContent = monthsGenitive[new Date().getMonth()];
-    });
-  </script>
 </body>
 
 </html>

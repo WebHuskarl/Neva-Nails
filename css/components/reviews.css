@@ -45,7 +45,7 @@
   border-color: var(--color-violet);
   box-shadow: 0 0 1.5rem rgba(124,92,255,0.35);
 }
-.reviews__nav:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
+.reviews__nav:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 2px; }
 .reviews__nav svg { width: 1.25rem; height: 1.25rem; pointer-events: none; }
 
 /* ---- Viewport (overflow:hidden, centered) ---- */
@@ -121,7 +121,7 @@
 .review-card__star {
   width: 0.875rem;
   height: 0.875rem;
-  color: var(--color-lilac);
+  color: var(--color-violet);
 }
 
 .review-card__text {
@@ -132,8 +132,8 @@
   line-height: var(--lh-relaxed);
   flex: 1;
 }
-.review-card__text::before { content: '\201C'; color: var(--color-lilac); font-size: 1.25em; }
-.review-card__text::after  { content: '\201D'; color: var(--color-lilac); font-size: 1.25em; }
+.review-card__text::before { content: '\201C'; color: var(--color-violet); font-size: 1.25em; }
+.review-card__text::after  { content: '\201D'; color: var(--color-violet); font-size: 1.25em; }
 
 .review-card__footer {
   display: flex;
@@ -193,4 +193,4 @@
   background: var(--color-violet);
   width: 1.5rem;
 }
-.reviews__dot:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
+.reviews__dot:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 2px; }

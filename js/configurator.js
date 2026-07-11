@@ -78,17 +78,13 @@ export function initConfigurator() {
     if (discountWrap && discountText && discountNote) {
       if (state.discount > 0) {
         discountWrap.style.display = '';
-        discountText.textContent   = `Скидка −${state.discount}% по поводу: ${seasonLabel}`;
-        discountNote.textContent   = `⚠ ${state.discountNote}`;
+        discountText.textContent   = `Скидка -${state.discount}% по поводу: ${seasonLabel}`;
+        discountNote.textContent   = `[Внимание] ${state.discountNote}`;
       } else {
         discountWrap.style.display = 'none';
       }
     }
 
-    // Save to sessionStorage for booking form
-    const bookingResult = state.discount > 0
-      ? `${result} (скидка −${state.discount}%)`
-      : result;
     // We do NOT save to sessionStorage or update the booking form here anymore.
     // That only happens when the user clicks 'bookBtn'.
   }
@@ -206,8 +202,8 @@ export function initConfigurator() {
       const shapeLabel  = document.querySelector(`input[name="shape"][value="${state.shape}"]`)?.closest('.config-option')?.querySelector('.config-option__label')?.textContent?.trim() || state.shape;
       const lengthLabel = document.querySelector(`input[name="length"][value="${state.length}"]`)?.closest('.config-option')?.querySelector('.config-option__label')?.textContent?.trim() || state.length;
       const seasonLabel = seasonLabels[state.season] || state.season;
-      const result = `${shapeLabel} / ${lengthLabel} / ${state.colorName} / ${seasonLabel}`;
-      const bookingResult = state.discount > 0 ? `${result} (скидка −${state.discount}%)` : result;
+      const result = `${shapeLabel} / ${lengthLabel} / ${state.colorName}`;
+      const bookingResult = result;
       
       sessionStorage.setItem('nail_design', bookingResult);
       updateBookingDesign(bookingResult);

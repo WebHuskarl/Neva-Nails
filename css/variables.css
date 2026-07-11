@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    VARIABLES — Torn Elegance design tokens
    Sharp angular aesthetic + refined typography
    ============================================================ */
@@ -15,9 +15,9 @@
   --color-ink-secondary: #524F4A;
   --color-ink-muted: #9A9793;
 
-  --color-violet: #7C5CFF;
-  --color-violet-light: #B9A0FF;
-  --color-violet-deep: #5A3FD4;
+  --color-violet: #5A3FD4;
+  --color-violet-light: #7C5CFF;
+  --color-violet-deep: #472CB5;
   --color-violet-glow: rgba(124, 92, 255, 0.12);
   --color-violet-glow-s: rgba(124, 92, 255, 0.06);
   --color-violet-bg: rgba(124, 92, 255, 0.06);
@@ -29,21 +29,7 @@
   --color-error: #D94444;
   --color-success: #1DB59A;
 
-  /* Legacy aliases */
-  --color-onyx: var(--color-bg);
-  --color-onyx-raised: var(--color-bg-raised);
-  --color-onyx-high: var(--color-bg-high);
-  --color-graphite: var(--color-border);
-  --color-graphite-mid: var(--color-border-mid);
-  --color-pearl: var(--color-ink);
-  --color-pearl-dim: var(--color-ink-secondary);
-  --color-pearl-muted: var(--color-ink-muted);
-  --color-lilac: var(--color-violet);
-  --color-lilac-deep: var(--color-violet-deep);
-  --color-lilac-glow: var(--color-violet-glow);
-  --color-lilac-glow-s: var(--color-violet-glow-s);
-  --color-mineral: var(--color-teal);
-  --color-mineral-glow: var(--color-teal-glow);
+
 
   /* --- Gradients --- */
   --grad-pearl: linear-gradient(135deg, #7C5CFF 0%, #B9A0FF 50%, #1DB59A 100%);

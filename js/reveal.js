@@ -17,9 +17,9 @@ export function initReveal() {
   // Все остальное (карточки, кнопки, обычный текст) выезжает снизу
   const bottomSelectors = [
     'section:not(.hero) p:not(.trust__brand-text):not(.booking__info-text)',
-    '.services__card',
+    '.service-card',
     '.gallery__item',
-    '.masters__card',
+    '.master-card',
     '.booking__step',
     '.review-card',
     '.loyalty__offer',

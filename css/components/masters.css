@@ -112,7 +112,7 @@
   font-family: var(--font-display);
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
-  color: var(--color-pearl);
+  color: var(--color-ink);
   margin-bottom: var(--sp-1);
 }
 .master-card__role {
@@ -136,12 +136,12 @@
   font-family: var(--font-display);
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
-  color: var(--color-pearl);
+  color: var(--color-ink);
 }
 .master-card__meta-label {
   font-family: var(--font-mono);
   font-size: 0.625rem;
-  color: var(--color-pearl-muted);
+  color: var(--color-ink-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -162,13 +162,13 @@
 .master-card__star {
   width: 0.875rem;
   height: 0.875rem;
-  color: var(--color-lilac);
+  color: var(--color-violet);
 }
-.master-card__star--empty { color: var(--color-graphite-mid); }
+.master-card__star--empty { color: var(--color-border-mid); }
 .master-card__rating-count {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--color-pearl-muted);
+  color: var(--color-ink-muted);
   margin-left: var(--sp-2);
 }
 

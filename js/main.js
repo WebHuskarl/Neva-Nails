@@ -21,15 +21,16 @@ window.updateBookingComment = function(type, text) {
   let val = commentField.value;
   
   const prefixes = {
-    design: '💅 Дизайн:',
-    promo: '🎁 Акция:',
+    design: '[Дизайн]',
+    promo: '[Акция]',
   };
   
   const prefix = prefixes[type];
   if (!prefix) return;
 
   // Remove existing line with this prefix
-  const regex = new RegExp(`^${prefix}.*$(\\r\\n|\\r|\\n)?`, 'gm');
+  const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(`^${escapedPrefix}.*$(\\r\\n|\\r|\\n)?`, 'gm');
   val = val.replace(regex, '');
   
   // Append new line if text is provided
@@ -51,6 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimers();
   initValidation();
   initReveal();
+
+  const monthsGenitive = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  const el = document.getElementById('dynamic-month');
+  if (el) el.textContent = monthsGenitive[new Date().getMonth()];
 
   /* Animate loyalty bars when they scroll into view */
   const bars = document.querySelectorAll('[data-bar-fill]');
@@ -198,10 +203,28 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (promoSelect) {
     promoSelect.addEventListener('change', (e) => {
-      if (e.detail === 'auto-sync') return;
-      
       const val = promoSelect.value;
+      const isAutoSync = e.detail === 'auto-sync';
       
+      // Always update the comment to match the dropdown exactly (max 1 promo)
+      if (val === 'set') {
+        window.updateBookingComment('promo', 'Сет «Всё включено» (маникюр, педикюр, покрытие и снятие)');
+      } else if (val === 'welcome') {
+        window.updateBookingComment('promo', 'Welcome-бонус на первый визит (-15%)');
+      } else if (val === 'birthday') {
+        window.updateBookingComment('promo', 'День рождения (-20%)');
+      } else if (val === 'wedding') {
+        window.updateBookingComment('promo', 'Свадьба / Годовщина (-15%)');
+      } else if (val === 'holiday') {
+        window.updateBookingComment('promo', 'Праздник (-7%)');
+      } else if (val === 'corporate') {
+        window.updateBookingComment('promo', 'Корпоратив (-10%)');
+      } else {
+        window.updateBookingComment('promo', '');
+      }
+
+      if (isAutoSync) return; // Stop here if triggered by another component
+
       // If promo changed away from 'set' but service is still 'set_all_inclusive', clear service
       if (val !== 'set' && serviceSelect && serviceSelect.value === 'set_all_inclusive') {
         serviceSelect.value = '';
@@ -213,23 +236,18 @@ document.addEventListener('DOMContentLoaded', () => {
           serviceSelect.value = 'set_all_inclusive';
           serviceSelect.dispatchEvent(new CustomEvent('change', { detail: 'auto-sync' }));
         }
-        window.updateBookingComment('promo', 'Сет «Всё включено» (маникюр, педикюр, покрытие и снятие)');
+        if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('everyday');
       } else if (val === 'welcome') {
-        window.updateBookingComment('promo', 'Welcome-бонус на первый визит (−15%)');
+        if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('everyday');
       } else if (val === 'birthday') {
-        window.updateBookingComment('promo', 'День рождения (−20%)');
         if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('birthday');
       } else if (val === 'wedding') {
-        window.updateBookingComment('promo', 'Свадьба / Годовщина (−15%)');
         if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('wedding');
       } else if (val === 'holiday') {
-        window.updateBookingComment('promo', 'Праздник (−7%)');
         if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('holiday');
       } else if (val === 'corporate') {
-        window.updateBookingComment('promo', 'Корпоратив (−10%)');
         if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('corporate');
       } else {
-        window.updateBookingComment('promo', '');
         if (window.selectConfiguratorSeason) window.selectConfiguratorSeason('everyday');
       }
     });

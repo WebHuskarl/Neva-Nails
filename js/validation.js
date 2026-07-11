@@ -66,12 +66,6 @@ export function initValidation() {
 
       e.target.value = formatted;
     });
-
-    phoneInput.addEventListener('keydown', e => {
-      if (e.key === 'Backspace') {
-        // Let native handle it
-      }
-    });
   }
 
   /* ---- Validators ---- */

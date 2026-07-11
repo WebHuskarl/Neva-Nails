@@ -19,18 +19,18 @@
   font-size: var(--fs-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-pearl-dim);
+  color: var(--color-ink-secondary);
   background: transparent;
   cursor: pointer;
   transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
-.gallery__filter:hover { border-color: rgba(185,160,255,0.4); color: var(--color-pearl); }
+.gallery__filter:hover { border-color: rgba(185,160,255,0.4); color: var(--color-ink); }
 .gallery__filter.is-active {
-  border-color: var(--color-lilac);
-  color: var(--color-pearl);
+  border-color: var(--color-violet);
+  color: var(--color-ink);
   background: rgba(185,160,255,0.08);
 }
-.gallery__filter:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
+.gallery__filter:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 2px; }
 
 /* Grid */
 .gallery__grid {
@@ -49,7 +49,7 @@
   transition: transform var(--transition-spring), box-shadow var(--transition-slow);
 }
 .gallery__item:hover { transform: scale(1.02); box-shadow: 0 0 2rem rgba(185,160,255,0.2), var(--shadow-md); }
-.gallery__item:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 3px; }
+.gallery__item:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 3px; }
 
 .gallery__img {
   width: 100%;
@@ -159,12 +159,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-pearl);
+  color: var(--color-ink);
   transition: background var(--transition), color var(--transition);
   z-index: 1;
 }
 .lightbox__close:hover { background: var(--color-bg-raised); color: var(--color-violet); }
-.lightbox__close:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
+.lightbox__close:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 2px; }
 .lightbox__close svg { width: 1.125rem; height: 1.125rem; pointer-events: none; }
 
 .lightbox__nav {
@@ -204,7 +204,7 @@
 .lightbox__caption-tag {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--color-lilac);
+  color: var(--color-violet);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
